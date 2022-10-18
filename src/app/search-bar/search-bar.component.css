@@ -1,0 +1,16 @@
+div.bg-img {
+    background-image: url('https://www.maggi.co.uk/sites/default/files/styles/maggi_desktop_image_style/public/NUK1265%20maggi%20Recipes%20banner%201500x700px%20opt2A.jpg?h=4f5b30f1&itok=DcsF1RwA');
+    height: 22rem;
+}
+
+h1.my-text {
+color: white;
+margin-top: 4rem;
+font-size: 3rem;
+text-align: center;
+
+
+}
+form.my-bar {
+    margin-bottom: 4rem;
+}
