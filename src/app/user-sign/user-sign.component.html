@@ -1,0 +1,124 @@
+<form action="#" enctype="multipart/form-data">
+    <div class="container">
+      <h1>Sign Up</h1>
+      <p>By completing this form, you'll be one step closer to a personalized experience!</p>
+      <hr>
+
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" id = "email" name="email" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" id = "psw" required>
+
+      <label for="psw"><b>Repeat Password</b></label>
+      <input type="password" placeholder="Confirm Password" name="psw-repeat" required>
+
+      <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+      </label>
+
+      <div class="form-group">
+        <a href = "#" routerLinkActive = "/HomeLayoutComponent">
+          <button type="button" class="cancelbtn">Cancel</button>
+        </a>
+
+        <button class="signupbtn" name ="register" id = "signupbtn"  >Sign Up</button>
+      </div>
+    </div>
+  </form>
+
+  
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-analytics.js";
+    import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    
+    const firebaseConfig = {
+  apiKey: "AIzaSyCvkE7KIo40JZyF9_wY3xu7HAcdrujJdWQ",
+  authDomain: "mock-recipe.firebaseapp.com",
+  projectId: "mock-recipe",
+  storageBucket: "mock-recipe.appspot.com",
+  messagingSenderId: "609816542264",
+  appId: "1:609816542264:web:6d38d4b8d8c6b8230d7acd",
+  measurementId: "G-9HPPHS2G8M"
+};
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+  const auth = getAuth();
+  console.log(app);
+
+    
+
+    //----- New Registration code start     
+    document.getElementById("signupbtn").addEventListener("click", function() {
+       event.preventDefault();
+      var email =  document.getElementById("email").value;
+        var password = document.getElementById("psw").value;
+        console.log(email);
+        //For new registration
+        createUserWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          // Signed in 
+          const user = userCredential.user;
+          console.log(user);
+          alert("Registration successfully!!");
+          // ...
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          // ..
+          console.log(errorMessage);
+          alert(error);
+        });                 
+    });
+    //----- End
+
+    //----- Login code start    
+    document.getElementById("login").addEventListener("click", function() {
+        var email =  document.getElementById("login_email").value;
+        var password = document.getElementById("login_password").value;
+
+        signInWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          // Signed in 
+          const user = userCredential.user;
+          console.log(user);
+          alert(user.email+" Login successfully!!!");
+          document.getElementById('logout').style.display = 'block';
+          // ...
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          console.log(errorMessage);
+          alert(errorMessage);
+        });                 
+    });
+    //----- End
+
+    //----- Logout code start   
+    document.getElementById("logout").addEventListener("click", function() {
+        signOut(auth).then(() => {
+            // Sign-out successful.
+            console.log('Sign-out successful.');
+            alert('Sign-out successful.');
+            document.getElementById('logout').style.display = 'none';
+          }).catch((error) => {
+            // An error happened.
+            console.log('An error happened.');
+          });               
+    });
+    //----- End
+
+  </script>
+
+ 
+  

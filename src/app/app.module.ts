@@ -9,6 +9,10 @@ import { FooterComponent } from './footer/footer.component';
 import { CardsComponent } from './cards/cards.component';
 import { TopNavBarComponent } from './top-nav-bar/top-nav-bar.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
+import { UserLoginComponent } from './user-login/user-login.component';
+import { UserSignComponent } from './user-sign/user-sign.component';
+import { HomeLayoutComponent } from './home-layout/home-layout.component';
+import { BeefRecipesComponent } from './beef-recipes/beef-recipes.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +22,11 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
     FooterComponent,
     CardsComponent,
     TopNavBarComponent,
-    SearchBarComponent
+    SearchBarComponent,
+    UserLoginComponent,
+    UserSignComponent,
+    HomeLayoutComponent,
+    BeefRecipesComponent
   ],
   imports: [
     BrowserModule,

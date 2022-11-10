@@ -1,0 +1,55 @@
+<form action="action_page.php" method="post" style = "size: 3rem;">
+  <div class="imgcontainer">
+    <a href = "#" routerLinkActive = "/HomeLayoutComponent">
+      <img src="/assets/image/recipelogo.png" alt="Avatar" class="avatar">
+    </a>
+    
+  </div>
+
+  <div class="container">
+    <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit">Login</button>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>
+
+  <div class="d-flex justify-content-evenly" style="background-color:#f1f1f1">
+    <button type="button" class="cancelbtn">
+      <a href = "#" routerLinkActive = "/HomeLayoutComponent" style = "text-decoration: none; color: white;">Cancel</a>
+    </button>
+    <span class="psw" style = "text-align: center;">Forgot <a href="#">password?</a></span>
+    <span class = "psw" style="text-align: center;">Don't have an account? <a href = "#" routerLink="/UserSignComponent">Sign up!</a></span>
+
+  </div>
+</form>
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyC8wHTJybJnYdjbedFjZ2VjRMMj165ERuY",
+    authDomain: "recipe-website-6a851.firebaseapp.com",
+    projectId: "recipe-website-6a851",
+    storageBucket: "recipe-website-6a851.appspot.com",
+    messagingSenderId: "1059231815364",
+    appId: "1:1059231815364:web:5e6324b612941294d9db91",
+    measurementId: "G-M1RTY923P6"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+  console.log(app);
+</script>
