@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { initializeApp } from 'firebase/app';
 
 @Component({
   selector: 'app-user-sign',
@@ -13,4 +14,6 @@ export class UserSignComponent implements OnInit {
   }
 
 }
+
+
 

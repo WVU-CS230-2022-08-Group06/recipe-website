@@ -1,0 +1,15 @@
+<h2 style = "text-align: center; text-decoration: underline;">AMERICAN CUISINE</h2>
+
+<div class = "container-fluid d-flex flex-wrap" style = "margin-bottom: 5rem; margin-top: 1rem">
+    <div *ngFor = "let x of americanRecipes" >
+        
+        <app-cards recipeName = {{x.recipeName}} recipePicture = {{x.recipePicture}}
+        category= {{x.category}} theStyle = {{x.style}} >
+           
+        </app-cards>
+        
+       
+    </div>
+   
+
+</div>

@@ -1,0 +1,23 @@
+#container {
+    text-align: center;
+ }
+
+ div.cardDesign {
+   background-color: white;
+    border-bottom: 1px solid rgba(0,0,0,.15);
+    
+ }
+ h4.words {
+    font-family: CopperPot,Helvetica,sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    text-underline-offset: 0.3125rem;
+    max-width: 18rem;
+    position: absolute;top:17rem
+ }
+
+ p.header {
+    color: gray;
+    text-transform: capitalize;
+ }

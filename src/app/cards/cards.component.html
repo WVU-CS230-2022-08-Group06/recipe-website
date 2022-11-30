@@ -1,6 +1,14 @@
-<div class="card" style="width: 18rem;">
-    <img src="https://www.allrecipes.com/thmb/ClVUDKHEixA1Fu6kzjronzJcInc=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/1034561-empanadas-beef-turnovers-Janet-Henderson-4x3-1-a658a394cfc34f54b1ca408bc931f007.jpg" class="card-img-top" alt="...">
-    <div class="card-body">
-      <p class="card-text" >BEEF ENCHILADAS</p>
-    </div>
+<div class="card" style="width: 18rem; height: 25rem; margin-left: 2.25rem; margin-top: 3rem;">
+  <img src="{{recipePicture}}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text header" style = "position: absolute;top:12.25rem"> {{theStyle}} cuisine</p>
+    <p class="card-text header" style = "position: absolute;top:14.25rem"> {{category}}</p>
+    <h4 class = "words">{{recipeName}}</h4><br>
+    <a href = "#" routerLinkActive = "/FullRecipeComponent">
+    <button  style = "position:absolute;top:21.5rem"type = "submit" class = "btn btn-primary" >Start Cooking!</button>
+    </a>
+    
   </div>
+</div>
+
+<!-- user star ratings  img in storage   access link copy-->
