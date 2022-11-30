@@ -13,11 +13,18 @@ export class AmericanRecipesComponent implements OnInit {
   constructor(private productsService: ProductsService) { }
 
   ngOnInit(): void {
-    this.productsService.getAmericanProducts().subscribe((data: RecipeCardModel[])=> 
+    this.productsService.getProducts().subscribe((data: RecipeCardModel[])=> 
     {console.log("Fetching products");
     for(var product of data) {
-      console.log(product);
+      //console.log(product);
+      // perhaps for low calorie and quick meals
+      // simply check first that product.cals <= 500 && (product.prepTime + product.cookTime) <= 30 mins
+      if (product.style == "American") {
       this.americanRecipes.push(product);
+      }
+      else {
+        continue;
+      }
     }
   })
   }

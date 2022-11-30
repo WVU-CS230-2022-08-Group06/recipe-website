@@ -32,25 +32,5 @@ export class AddRecipeComponent implements OnInit {
     return false;
   }
 
-  addAmericanRecipe(product: RecipeCardModel)
-  {
-    this.ps.addAmericanProducts(product);
-  }
-  addKoreanRecipe(product: RecipeCardModel)
-  {
-
-  }
-  addMexicanRecipe(product: RecipeCardModel)
-  {
-
-  }
-  addIndianRecipe(product: RecipeCardModel)
-  {
-
-  }
-  addChineseRecipe(product: RecipeCardModel)
-  {
-
-  }
 
 }

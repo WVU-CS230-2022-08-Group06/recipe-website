@@ -19,5 +19,5 @@
 
  p.header {
     color: gray;
-    text-transform: capitalize;
+    text-transform: uppercase;
  }
