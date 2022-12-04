@@ -1,0 +1,12 @@
+h1.type--lion {
+    font-family: CopperPot,Helvetica,sans-serif;
+    font-size: 3rem;
+    line-height: 2.25rem;
+    font-weight: 700;
+    text-underline-offset: 0.5625rem;
+    text-align: center;
+}
+
+div.laser {
+    margin-top: 5rem;
+}

@@ -1,0 +1,12 @@
+button.edit {
+   width: 9.5rem;
+}
+
+a.logo {
+    color:black;
+    text-decoration: none;
+    position:absolute;
+    top: 1.2rem;
+    right: 1.2rem;
+}
+

@@ -21,3 +21,8 @@
     color: gray;
     text-transform: uppercase;
  }
+ p.lion {
+   font-size: small;
+   position:absolute;
+   bottom: 3rem;
+ }

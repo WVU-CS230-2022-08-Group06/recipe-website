@@ -1,0 +1,8 @@
+<h1>Recommend recipes for the home page for others to see!</h1>
+<form #postForm = "ngForm"(ngSubmit) = "submitRequest(postForm)">
+    <label for="requestName">Recipe name:</label><br>
+    <input  type="text" ngModel minlength="5" ngModel maxlength="30" id="requestName" ngModel name = "recipeName" ngModel required><br>
+
+    <input type="submit" class="btn btn-primary" id="testing" name = "Upload"  ngNativeValidate>
+
+</form>

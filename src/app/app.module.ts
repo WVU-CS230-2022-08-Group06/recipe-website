@@ -12,13 +12,13 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
 import { UserLoginComponent } from './user-login/user-login.component';
 import { UserSignComponent } from './user-sign/user-sign.component';
 import { HomeLayoutComponent } from './home-layout/home-layout.component';
-import { BeefRecipesComponent } from './beef-recipes/beef-recipes.component';
+
 import { AddRecipeComponent } from './add-recipe/add-recipe.component';
 import { FormsModule } from '@angular/forms';
 
-import { ExpandRecipeComponent } from './expand-recipe/expand-recipe.component';
+
 import { UserPageComponent } from './user-page/user-page.component';
-import { RecipePageComponent } from './recipe-page/recipe-page.component';
+
 import {AngularFireModule} from '@angular/fire/compat';
 import {AngularFirestoreModule} from '@angular/fire/compat/firestore/';
 import { environment } from 'src/environments/environment.prod';
@@ -33,6 +33,11 @@ import { ChineseRecipesComponent } from './chinese-recipes/chinese-recipes.compo
 import { KoreanRecipesComponent } from './korean-recipes/korean-recipes.component';
 import { MexicanRecipesComponent } from './mexican-recipes/mexican-recipes.component';
 import { AllRecipesComponent } from './all-recipes/all-recipes.component';
+import { RequestComponent } from './request/request.component';
+import { RequestFormComponent } from './request-form/request-form.component';
+import { ModalComponent } from './modal/modal.component';
+import { AuthComponent } from './auth/auth.component';
+
 
 
 @NgModule({
@@ -47,14 +52,12 @@ import { AllRecipesComponent } from './all-recipes/all-recipes.component';
     UserLoginComponent,
     UserSignComponent,
     HomeLayoutComponent,
-    BeefRecipesComponent,
     AddRecipeComponent,
     
    
 
-    ExpandRecipeComponent,
+    
     UserPageComponent,
-    RecipePageComponent,
     FullRecipeComponent,
     BfastRecipesComponent,
     LunchRecipesComponent,
@@ -65,7 +68,12 @@ import { AllRecipesComponent } from './all-recipes/all-recipes.component';
     ChineseRecipesComponent,
     KoreanRecipesComponent,
     MexicanRecipesComponent,
-    AllRecipesComponent
+    AllRecipesComponent,
+    RequestComponent,
+    RequestFormComponent,
+    ModalComponent,
+    AuthComponent
+    
     
   ],
   imports: [

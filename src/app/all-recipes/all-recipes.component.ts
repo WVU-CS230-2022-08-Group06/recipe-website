@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RecipeCardModel } from '../cards/recipe-card.model';
 import { ProductsService } from '../products-service';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({
   selector: 'app-all-recipes',

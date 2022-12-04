@@ -1,24 +1,17 @@
-
 <div class = "d-flex flex-column justify-content-center w-100 h-150 cool" >
-  <div class = "container col-sm-3 w-25" style = "margin-left: 7rem; position:absolute; top:14.5rem; left: 3rem">
-  <a href = "#" routerLinkActive = "/HomeLayoutComponent">
-  <svg xmlns="http://www.w3.org/2000/svg" width="58" height="58"  fill="black" class="bi bi-house" viewBox="0 0 16 16">
-    <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z"/>
-  </svg>
-  </a>
-  </div>
-
+  
 <h2 style="text-align: center;">Enter your recipe details!</h2><br>
-    <form id = "method" #postForm = "ngForm" (ngSubmit) = "validate(postForm)"(ngSubmit) = "addRecipe(postForm.value)" class = "design" ngNativeValidate >
+    <form id = "method" #postForm = "ngForm" (ngSubmit) = "addRecipe(postForm.value, postForm)" class = "design" ngNativeValidate >
 
   <label for="fname">Recipe name:</label><br>
-  <input type="text" ngModel minlength="5" ngModel maxlength="30" id="fname" ngModel name="recipeName" ngModel required><br>
+  <input type="text" ngModel minlength="5" ngModel maxlength="30" id="fname" ngModel name = "recipeName" ngModel required><br>
 
   <label for="lname">Recipe photo:</label><br>
-  <input type="text" id="lname" ngModel name="recipePicture"ngModel required ><br><br>
+  <input type="text" id="lname"  ngModel name="recipePicture"ngModel required ><br><br>
 
   <label for="short">Short Description:</label><br>
   <input  type = "text" id="short" ngModel name = "desc"ngModel required><br><br>
+
 
   <label for = "steps">Recipe steps:</label><br>
   <textarea style = "resize: none;"id = "steps" ngModel name = "steps" rows = "2" cols = "30"ngModel required>
@@ -54,7 +47,7 @@
 <input type="submit" class="btn btn-primary" id="testing" name = "Upload"  ngNativeValidate>
 
 &nbsp;&nbsp;&nbsp;
-<button type="submit" required class="btn btn-danger"><a href = "#" style="color: white; text-decoration: none;" routerLinkActive = "/HomeLayoutComponent">
+<button type="submit" required class="btn btn-danger"><a  style="color: white; text-decoration: none;" routerLink = "">
   CANCEL
 </a></button>
 

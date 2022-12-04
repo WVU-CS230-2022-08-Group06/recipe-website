@@ -1,1 +1,18 @@
-<p>dinner-recipes works!</p>
+<app-top-nav-bar></app-top-nav-bar>
+<app-header></app-header>
+
+<h2 style = "text-align: center; text-decoration: underline;">DINNER MEALS</h2>
+
+<div class = "container-fluid d-flex flex-wrap" style = "margin-bottom: 5rem; margin-top: 1rem">
+    <div *ngFor = "let x of dinnerRecipes" >
+        
+        <app-cards recipeName = {{x.recipeName}} recipePicture = {{x.recipePicture}}
+        category= {{x.category}} theStyle = {{x.style}} >
+           
+        </app-cards>
+        
+       
+    </div>
+   
+
+</div>

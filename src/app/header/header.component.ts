@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  // potentially use this method to get search bar value?
+  update() {
+    
   }
 
 }

@@ -3,16 +3,25 @@ import { RouterModule, Routes } from '@angular/router';
 import { AddRecipeComponent } from './add-recipe/add-recipe.component';
 import { AllRecipesComponent } from './all-recipes/all-recipes.component';
 import { AmericanRecipesComponent } from './american-recipes/american-recipes.component';
-import { BeefRecipesComponent } from './beef-recipes/beef-recipes.component';
+import { AuthComponent } from './auth/auth.component';
+
+import { BfastRecipesComponent } from './bfast-recipes/bfast-recipes.component';
 import { CardsComponent } from './cards/cards.component';
 import { FullRecipeComponent } from './cards/full-recipe/full-recipe.component';
+import { ChineseRecipesComponent } from './chinese-recipes/chinese-recipes.component';
+import { DessertRecipesComponent } from './dessert-recipes/dessert-recipes.component';
+import { DinnerRecipesComponent } from './dinner-recipes/dinner-recipes.component';
 
 
-import { ExpandRecipeComponent } from './expand-recipe/expand-recipe.component';
+
 import { HomeLayoutComponent } from './home-layout/home-layout.component';
+import { IndianRecipesComponent } from './indian-recipes/indian-recipes.component';
 import { KoreanRecipesComponent } from './korean-recipes/korean-recipes.component';
+import { LunchRecipesComponent } from './lunch-recipes/lunch-recipes.component';
+import { MexicanRecipesComponent } from './mexican-recipes/mexican-recipes.component';
 
-import { RecipePageComponent } from './recipe-page/recipe-page.component';
+
+import { RequestFormComponent } from './request-form/request-form.component';
 
 
 import { UserLoginComponent } from './user-login/user-login.component';
@@ -31,22 +40,12 @@ const routes: Routes = [ {
   path: 'UserSignComponent' ,
   component: UserSignComponent
 },
-{
-  path: 'BeefRecipesComponent', 
-  component: BeefRecipesComponent
-},
-{
-  path: 'CardsComponent',
-  component: CardsComponent
-},
-{
-  path: 'ExpandRecipeComponent',
-  component: ExpandRecipeComponent
-},
-{
-  path: 'RecipePageComponent',
-  component: RecipePageComponent
-},
+
+{path: 'CardsComponent', component: CardsComponent,
+children: [{path: ':name', component: FullRecipeComponent}]},
+
+{path: 'RequestRecipe', component: RequestFormComponent},
+
 {
   path: 'UserPageComponent',
   component: UserPageComponent
@@ -55,13 +54,11 @@ const routes: Routes = [ {
   path: 'AddRecipeComponent',
   component: AddRecipeComponent
 },
-{
-  path: 'RecipePageComponent',
-  component: RecipePageComponent
-},
+
 {
   path: 'FullRecipeComponent',
-  component: FullRecipeComponent
+  component: FullRecipeComponent, data: {recipeName: 'blank'}
+  
 },
 {
   path: 'AmericanRecipes',
@@ -74,7 +71,37 @@ const routes: Routes = [ {
 {
   path: 'AllRecipes',
   component: AllRecipesComponent
-}
+},
+{
+  path: 'BreakfastRecipes',
+  component: BfastRecipesComponent
+},
+{
+  path: 'MexicanRecipes',
+  component: MexicanRecipesComponent
+},
+{
+  path: 'IndianRecipes',
+  component: IndianRecipesComponent
+},
+{
+  path: 'ChineseRecipes',
+  component: ChineseRecipesComponent
+},
+{
+  path: 'LunchRecipes',
+  component: LunchRecipesComponent
+},
+{
+  path: 'DinnerRecipes',
+  component: DinnerRecipesComponent
+},
+{
+  path: 'DessertRecipes',
+  component: DessertRecipesComponent
+},
+{path: 'Login', component: AuthComponent}
+
 ];
 
 @NgModule({

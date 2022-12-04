@@ -21,6 +21,12 @@ export class ProductsService {
     getProducts() {
         return this.db.list<RecipeCardModel>("allrecipes").valueChanges();
     }
+    getRequestedProducts() {
+        return this.db.list<RecipeCardModel>("requestedrecipes").valueChanges();
+    }
+    addRequestedProducts(product: RecipeCardModel) {
+         this.db.list<RecipeCardModel>("requestedrecipes").push(product);
+    }
    
 
     // this is how we submit ALL uploaded recipes to database

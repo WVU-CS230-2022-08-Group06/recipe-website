@@ -1,14 +1,16 @@
-<div class="card" style="width: 18rem; height: 25rem; margin-left: 2.25rem; margin-top: 3rem;">
-  <img src="{{recipePicture}}" class="card-img-top" alt="...">
+
+<div class="card"  style="width: 18rem; height: 25rem; margin-left: 2.25rem; margin-top: 3rem;">
+  <img src="{{recipePicture}}" height="185" class="card-img-top" alt="...">
   <div class="card-body">
     <p class="card-text header" style = "position: absolute;top:12.25rem;"> {{theStyle}} cuisine</p>
     <p class="card-text header" style = "position: absolute;top:14.25rem"> {{category}}</p>
-    <h4 class = "words">{{recipeName}}</h4><br>
-    <a href = "#" routerLinkActive = "/FullRecipeComponent">
-    <button  style = "position:absolute;top:21.5rem"type = "submit" class = "btn btn-primary" >Start Cooking!</button>
-    </a>
+    <h4 id ="testing"class = "words">{{recipeName}}</h4><br>
+    <p class = "lion">{{recom}}</p>
+    <button  style = "position:absolute;top:21.5rem" (click)="navigate()" type = "submit" class = "btn btn-primary" >Start Cooking!</button>
+    
     
   </div>
 </div>
+
 
 <!-- user star ratings  img in storage   access link copy-->
