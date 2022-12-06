@@ -17,7 +17,9 @@ export class RequestComponent implements OnInit {
     for(var product of data) {
       console.log(product);
       this.requestedRecipes.push(product);
+      
     }
+    
   })
   }
 

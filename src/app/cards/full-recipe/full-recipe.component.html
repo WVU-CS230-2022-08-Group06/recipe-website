@@ -1,14 +1,30 @@
 <app-top-nav-bar></app-top-nav-bar>
 <app-header></app-header>
 <div class="container laser">
-<h1 class = "type--lion">{{rName}}</h1>
-<h4>{{rMeal}}</h4>
-<h4>{{rStyle}}</h4>
-<p>{{rDesc}}</p>
-<h4>{{rIngred}}</h4>
-<h4>{{rSteps}}</h4>
-<img src = "{{rPic}}" width="75" height="100">
+    <img src = "/assets/image/wvulogo.png" class = "images pride">
+    <div class="row">
+        
+        <h1 class = "type--lion">{{rName}}</h1>
+
+        <h3 class = "style-meal">{{rStyle}} {{rMeal}}</h3><br>
+       
+        <img src = "{{rPic}}" class = "images"><br>
+        
+        <p>Prep time: {{prep}}</p>
+        <p>Cook time: {{cook}}</p>
+
+        <p class = "desc">{{rDesc}}</p>
+       
+        
+        <h3>Ingredients:</h3><br>
+        <p class = "steps">{{rIngred}}</p>
+
+        <h3 >Recipe steps:</h3><br>
+        <p class = "steps">{{rSteps}}</p>
+        
+    </div>
 </div>
+
 
 
 

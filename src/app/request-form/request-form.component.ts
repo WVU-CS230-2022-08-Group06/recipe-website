@@ -50,6 +50,7 @@ export class RequestFormComponent implements OnInit {
     if (this.verifyRecipeExists().recipeName != "fake" && this.verifyNotDisplayed()) {
       this.productsService.addRequestedProducts(this.verifyRecipeExists());
       alert("Successful recommendation!");
+      
       form.reset();
      
     }

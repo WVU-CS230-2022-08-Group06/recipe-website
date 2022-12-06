@@ -1,0 +1,31 @@
+<div class = "container mountaineer">
+    <div class="wrapper WVU h-300 w-250" style = "margin: 0 auto; background-color: rgb(248, 206, 19);">
+ 
+        <div class="form-container" style = "text-align: center; margin: auto;"> 
+            <h2 style = "color: #0a0db9;">WVU Recipes!</h2>
+           <div class="form-inner" >
+              <form #authForm = "ngForm" (ngSubmit) = "onSubmit(authForm)" ngNativeValidate>
+                 <div class="field">
+                    <input type="email" id = "email"placeholder="Email Address" required ngModel name = "email">
+                 </div>
+                 <div class="field">
+                    <input type="password" ngModel minlength="6"  ngModel name = "password" id = "password"placeholder="Password" required>
+                 </div>
+                 <div class="field">
+                    <input type="password" ngModel name = "confirmpassword"   id = "confirmpassword"placeholder="Confirm Password" required>
+                 </div>
+                 
+                
+                 <div class="field btn">
+                    <div class="btn-layer"></div>
+                    <input type="submit" value="Sign up">
+                 </div>
+                 <div class = "popup">
+                  <span id = "pop" class = "popuptext"></span>
+                 </div>
+                 
+              </form>
+           </div>
+        </div>
+     </div>
+    </div>

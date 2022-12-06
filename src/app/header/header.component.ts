@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -7,15 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  
-  constructor() { }
+  ingredientArray : string[] = ["Chicken", "Seafood"];
+  constructor(private route: Router) { }
 
   ngOnInit(): void {
   }
 
   // potentially use this method to get search bar value?
-  update() {
-    
-  }
+  
+
+ 
 
 }

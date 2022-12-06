@@ -1,6 +1,6 @@
 export const environment = {
   firebase: {
-    apiKey: "AIzaSyCvkE7KIo40JZyF9_wY3xu7HAcdrujJdWQ",
+  apiKey: "AIzaSyCvkE7KIo40JZyF9_wY3xu7HAcdrujJdWQ",
   authDomain: "mock-recipe.firebaseapp.com",
   databaseURL: "https://mock-recipe-default-rtdb.firebaseio.com",
   projectId: "mock-recipe",

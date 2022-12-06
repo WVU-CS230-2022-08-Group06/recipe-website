@@ -12,7 +12,7 @@ export class AuthService {
     signUpEndPoint: string = "signUp";
     signIn: string = "signInWithPassword"
 
-   
+   public isLoggedIn: boolean = false;
     public constructor(private http: HttpClient) {
 
     }
@@ -35,4 +35,11 @@ export class AuthService {
         return this.http.post<AuthResponse>(this.baseUrl + ":" + this.signIn + "?" + "key=" + environment.firebase.apiKey, requestBody);
     }
 
+    loggedIn() {
+        this.isLoggedIn = true;
+        
     }
+
+    }
+
+

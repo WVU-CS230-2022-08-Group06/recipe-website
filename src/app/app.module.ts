@@ -37,6 +37,11 @@ import { RequestComponent } from './request/request.component';
 import { RequestFormComponent } from './request-form/request-form.component';
 import { ModalComponent } from './modal/modal.component';
 import { AuthComponent } from './auth/auth.component';
+import { AuthService } from './auth/auth.service';
+import { HttpClient, HttpClientModule, HttpHandler } from '@angular/common/http';
+import { SignUpComponent } from './auth/sign-up/sign-up.component';
+import { SearchComponent } from './search/search.component';
+
 
 
 
@@ -72,7 +77,10 @@ import { AuthComponent } from './auth/auth.component';
     RequestComponent,
     RequestFormComponent,
     ModalComponent,
-    AuthComponent
+    AuthComponent,
+    SignUpComponent,
+    SearchComponent,
+
     
     
   ],
@@ -81,9 +89,10 @@ import { AuthComponent } from './auth/auth.component';
     AppRoutingModule,
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [AuthService, HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

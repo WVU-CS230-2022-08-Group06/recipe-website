@@ -1,10 +1,10 @@
-<nav class="navbar bg-white">
+<nav class="navbar bg-warning">
   <div class="container-fluid">
     <div class = "d-flex mb-3">
       <div class = "p-2 me-5">
-    <li class="nav-item dropdown " style="list-style: none;font-weight: 500;">
+    <li class="nav-item dropdown " style="list-style: none;font-weight: 500; color:#0d10d6">
       <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-        MEALS
+        Meals
       </a>
       <ul class="dropdown-menu dropdown-menu-dark">
         <li><a class="dropdown-item active" href="#" routerLink="/BreakfastRecipes">Breakfast</a></li>
@@ -16,27 +16,43 @@
     </li>
       </div>
       <div class = "p-2 me-5">
-    <li class="nav-item dropdown" style="list-style: none; font-weight: 500;">
+    <li class="nav-item dropdown" style="list-style: none; font-weight: 500; color:#0d10d6">
       <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-        CUISINES
+        Cuisines
       </a>
-      <ul class="dropdown-menu dropdown-menu-dark">
-        <li><a class="dropdown-item active" href="#" routerLink = "/AmericanRecipes">American</a></li>
-        <li><a class="dropdown-item" href = "#"  routerLink = "/MexicanRecipes">Mexican</a></li>
+      <div class="dropdown-menu dropdown-menu-dark">
+        <a class="dropdown-item active" href="#" routerLink = "/AmericanRecipes">American</a>
+        <a class="dropdown-item" href = "#"  routerLink = "/MexicanRecipes">Mexican</a>
         <li><a class="dropdown-item " href="#" routerLink = "/ChineseRecipes">Chinese</a></li>
         <li><a class="dropdown-item " href="#" routerLink="/KoreanRecipes">Korean</a></li>
         <li><a class="dropdown-item " href="#" routerLink="/IndianRecipes">Indian</a></li>
-      </ul>
+      </div>
+      
     </li>
+
+    
+    
       </div>
       <div class = "p-2">
+      <li class="nav-item dropdown" style="list-style: none; font-weight: 500; color:#0d10d6">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Ingredients
+        </a>
+        <div class="dropdown-menu dropdown-menu-dark">
+          <a class="dropdown-item active" href="#" routerLink = "/AmericanRecipes">Beef</a>
+          <a class="dropdown-item" href = "#"  routerLink = "/MexicanRecipes">Chicken</a>
+          <li><a class="dropdown-item " href="#" routerLink = "/ChineseRecipes">Seafood</a></li>
+          <li><a class="dropdown-item " href="#" routerLink="/KoreanRecipes">Pasta</a></li>
+          <li><a class="dropdown-item " href="#" routerLink="/IndianRecipes">Fruits/Vegetables</a></li>
+        </div>
+        
+      </li>
+      </div>
+      
    
     </div>
-    </div>
-    <input type="text" placeholder="Search ingredients">
-   
-  </div>
     
- 
+    </div>
+    
   
 </nav>

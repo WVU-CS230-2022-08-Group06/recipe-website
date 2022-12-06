@@ -1,20 +1,82 @@
-<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="/assets/image/pic1.png">
-      <div class="carousel-item">
-        <img src="/assets/image/pic2.png" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="/assets/image/pic3.png" class="d-block w-100" alt="...">
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
+<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel" data-interval = "false">
+   <div class="carousel-indicators" >
+     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"  aria-label="Slide 2"></button>
+     <button type="button" data-bs-target="#carouselExampleDark"data-bs-slide-to="2"  aria-label="Slide 3"></button>
+     <button type="button" data-bs-target="#carouselExampleDark"data-bs-slide-to="3"  aria-label="Slide 4"></button>
+     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4" aria-label="Slide 5"></button>
+     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="5" aria-label="Slide 6"></button>
+   </div>
+   
+   <div class="carousel-inner">
+
+      <a routerLink = "/AllRecipes">
+         <div class="carousel-item active"   style="height: 335px">
+           <img src="https://media-cldnry.s-nbcnews.com/image/upload/rockcms/2022-03/plant-based-food-mc-220323-02-273c7b.jpg" class="d-block w-100" alt="...">
+           <div class="carousel-caption" style="color:rgb(255, 255, 255); font-weight: bold; font-size: 10cm;">
+             <h5>ALL RECIPES</h5>
+           </div>
+       
+         </div>
+          </a>
+
+          <a routerLink = "/IndianRecipes">
+            <div class="carousel-item" data-bs-interval="false" style="height: 335px" >
+              <img src="https://www.blueosa.com/wp-content/uploads/2020/01/the-best-top-10-indian-dishes.jpg" class="d-block w-100" alt="...">
+              <div class="carousel-caption" style="color:rgb(255, 255, 255); font-weight: bold; font-size: 10cm;">
+                <h5>INDIAN</h5>
+              </div>
+          
+            </div>
+             </a>
+       
+             
+       
+             <a routerLink = "/AmericanRecipes">
+            <div class="carousel-item"  style="height: 335px;">
+              <img src="https://cdn.tasteatlas.com/images/toplistarticles/08c818739e4b48ce96d319c16f4cc0ca.jpg" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block" style="color:rgb(255, 255, 255); font-weight: bold; font-size: 10cm;">
+                <h5>AMERICAN</h5>
+              </div>
+            </div>
+             </a>
+            
+       
+             <a routerLink = "/MexicanRecipes">
+            <div class="carousel-item"  style="height: 335px;" >
+              <img src="https://popmenucloud.com/bhxiavmo/73b4b821-571d-434d-949b-6962e81a5df4" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block" style="color:rgb(255, 255, 255); font-weight: bold; font-size: 10cm;">
+                <h5>MEXICAN</h5>
+              </div>
+            </div>
+             </a>
+            
+       
+             <a routerLink = "/ChineseRecipes">
+            <div class="carousel-item" data-bs-interval="false" style="height: 335px;">
+              <img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F19%2F2017%2F08%2F17%2FGettyImages-545286388-2000.jpg&q=60" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block" style="color:rgb(255, 255, 255); font-weight: bold; font-size: 10cm;">
+                <h5>CHINESE</h5>
+              </div>
+            </div>
+             </a>
+       
+             <a routerLink = "/KoreanRecipes">
+            <div class="carousel-item" data-bs-interval="false" style="height: 335px;">
+              <img src="https://assets.dmagstatic.com/wp-content/uploads/2018/02/korean-food-guide-dallas.jpg" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block" style="color:rgb(255, 255, 255); font-weight: bold; font-size: 10cm;">
+                <h5 >KOREAN</h5>
+              </div>
+            </div>
+             </a>
+
+   </div>
+   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+     <span class="visually-hidden">Previous</span>
+   </button>
+   <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+     <span class="carousel-control-next-icon" aria-hidden="true"></span>
+     <span class="visually-hidden">Next</span>
+   </button>
+</div>

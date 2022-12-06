@@ -6,4 +6,19 @@ navbar input[type=text] {
     margin-right: 16px;
     font-size: 17px;
   }
+  .all-recipes {
+    color: #0d10d6;
+    font-size:20px;
+    
+    background-color: #0d10d6;
+    color:white;
+    width: 9.5rem;
+    position:absolute;
+    left: 32.5rem; 
+    top: 0.75rem;
+    
+  }
+
+
+ 
 

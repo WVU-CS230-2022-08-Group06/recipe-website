@@ -2,4 +2,10 @@ button.cool {
     margin-right: 6rem;
     width: 11rem;
     
+    background-color: #0d10d6;
+    color:white;
+    height:2.5rem;
+    border-style: groove;
+    outline-color: #0d10d6;
+    
 }

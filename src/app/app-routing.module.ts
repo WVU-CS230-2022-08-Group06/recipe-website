@@ -4,10 +4,13 @@ import { AddRecipeComponent } from './add-recipe/add-recipe.component';
 import { AllRecipesComponent } from './all-recipes/all-recipes.component';
 import { AmericanRecipesComponent } from './american-recipes/american-recipes.component';
 import { AuthComponent } from './auth/auth.component';
+import { SignUpComponent } from './auth/sign-up/sign-up.component';
+
 
 import { BfastRecipesComponent } from './bfast-recipes/bfast-recipes.component';
 import { CardsComponent } from './cards/cards.component';
 import { FullRecipeComponent } from './cards/full-recipe/full-recipe.component';
+import { CarouselsComponent } from './carousels/carousels.component';
 import { ChineseRecipesComponent } from './chinese-recipes/chinese-recipes.component';
 import { DessertRecipesComponent } from './dessert-recipes/dessert-recipes.component';
 import { DinnerRecipesComponent } from './dinner-recipes/dinner-recipes.component';
@@ -100,7 +103,8 @@ children: [{path: ':name', component: FullRecipeComponent}]},
   path: 'DessertRecipes',
   component: DessertRecipesComponent
 },
-{path: 'Login', component: AuthComponent}
+{path: 'Login', component: AuthComponent},
+{path: 'SignUp', component: SignUpComponent}
 
 ];
 

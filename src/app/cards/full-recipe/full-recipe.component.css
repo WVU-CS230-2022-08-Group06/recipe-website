@@ -4,9 +4,37 @@ h1.type--lion {
     line-height: 2.25rem;
     font-weight: 700;
     text-underline-offset: 0.5625rem;
-    text-align: center;
+    margin-bottom:1rem;
+    
 }
 
 div.laser {
     margin-top: 5rem;
+}
+.pride {
+    position: absolute;
+    right: 1.85rem;
+    top: 22rem;
+}
+
+.images {
+    width: 50%;
+    height: 50%;
+    
+    margin-bottom: 2.15rem;
+}
+
+.steps {
+    word-wrap:break-word;
+    width: 600px;
+}
+
+.style-meal {
+    font-size: 300;
+    margin-bottom:1rem
+}
+.desc {
+    
+    word-wrap:break-word;
+    width: 600px;
 }

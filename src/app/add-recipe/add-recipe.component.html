@@ -7,10 +7,10 @@
   <input type="text" ngModel minlength="5" ngModel maxlength="30" id="fname" ngModel name = "recipeName" ngModel required><br>
 
   <label for="lname">Recipe photo:</label><br>
-  <input type="text" id="lname"  ngModel name="recipePicture"ngModel required ><br><br>
+  <input type = "url" id="lname"  ngModel name="recipePicture"ngModel required ><br>
 
   <label for="short">Short Description:</label><br>
-  <input  type = "text" id="short" ngModel name = "desc"ngModel required><br><br>
+  <input  type = "text" id="short" ngModel name = "desc"ngModel required><br>
 
 
   <label for = "steps">Recipe steps:</label><br>
@@ -18,19 +18,19 @@
   </textarea> <br>
 
   <label for = "ingred">Ingredients:</label><br>
-  <textarea style = "resize: none;" ngModel name = "ingredients" id = "ingred" name = "steps" rows = "2" cols = "30"ngModel required >
+  <textarea style = "resize: none;" ngModel name = "ingredients" id = "ingredients"  rows = "2" cols = "30"ngModel required >
   </textarea> <br>
 
 
   
-  <label  for="style">Cuisine:<br></label><br>
+  <label  for="style">Cuisine:</label><br>
   <select class = "custom-select" id= "style" ngModel name = "style"required>
     <option  value = "American">American</option>
     <option  value = "Korean">Korean</option>
     <option  value = "Mexican">Mexican</option>
     <option  value = "Chinese">Chinese</option>
     <option  value = "Indian">Indian</option>
-  </select> <br>
+  </select><br>
 
   <label for="type">Meal:</label><br>
   <select id= "type" class = "custom-select" ngModel name = "category"required>
@@ -39,17 +39,26 @@
     <option  value = "Dinner">Dinner</option>
     <option  value = "Dessert">Dessert</option>
   </select><br>
-  
-
-<br>
 
 
-<input type="submit" class="btn btn-primary" id="testing" name = "Upload"  ngNativeValidate>
+  <label for ="prep" class = "daprep">Prep time (mins):</label><br>
+  <input type = "number" class = "times" id = "prep" ngModel name = "preptime" required><br>
 
-&nbsp;&nbsp;&nbsp;
-<button type="submit" required class="btn btn-danger"><a  style="color: white; text-decoration: none;" routerLink = "">
-  CANCEL
-</a></button>
+  <label for ="cook" class = "dacook">Cook time (mins):&nbsp;&nbsp;</label><br>
+  <input type = "number" class = "times" id = "prep" ngModel name = "cooktime" required ngModel min="15">
+
+
+
+<div class="container green">
+  <div class="col">
+    <input type="submit" class="btn btn-primary"  id="testing" name = "Upload"  ngNativeValidate>
+
+    &nbsp;&nbsp;&nbsp;
+    <button type="submit"  required class="btn btn-danger"><a  style="color: white; text-decoration: none;" routerLink = "">
+     CANCEL
+    </a></button>
+  </div>
+</div>
 
   
 </form>
