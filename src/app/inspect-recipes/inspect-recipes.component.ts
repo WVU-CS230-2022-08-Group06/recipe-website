@@ -28,7 +28,7 @@ export class InspectRecipesComponent implements OnInit {
   // this method is called if we decide a recipe is worth posting to our users
   // we add it to the "allrecipes" list, and then remove from "testing" list
   accept(product: RecipeCardModel) {
-    this.productsService.addProducts(product);
+    this.productsService.addProducts(product),
     this.productsService.removeRequest(product);
     
   }

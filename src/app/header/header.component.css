@@ -1,4 +1,4 @@
-navbar input[type=text] {
+ input[type=text] {
     float: right;
     padding: 6px;
     border: none;
@@ -11,7 +11,7 @@ navbar input[type=text] {
     font-size:20px;
     
     background-color: #0d10d6;
-    color:white;
+    
     width: 9.5rem;
     position:absolute;
     left: 32.5rem; 

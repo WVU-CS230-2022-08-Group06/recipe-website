@@ -9,15 +9,15 @@ import { FooterComponent } from './footer/footer.component';
 import { CardsComponent } from './cards/cards.component';
 import { TopNavBarComponent } from './top-nav-bar/top-nav-bar.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
-import { UserLoginComponent } from './user-login/user-login.component';
-import { UserSignComponent } from './user-sign/user-sign.component';
+
+
 import { HomeLayoutComponent } from './home-layout/home-layout.component';
 
 import { AddRecipeComponent } from './add-recipe/add-recipe.component';
 import { FormsModule } from '@angular/forms';
 
 
-import { UserPageComponent } from './user-page/user-page.component';
+
 
 import {AngularFireModule} from '@angular/fire/compat';
 import {AngularFirestoreModule} from '@angular/fire/compat/firestore/';
@@ -66,15 +66,14 @@ import { LiveCardsComponent } from './live-cards/live-cards.component';
     CardsComponent,
     TopNavBarComponent,
     SearchBarComponent,
-    UserLoginComponent,
-    UserSignComponent,
+    
     HomeLayoutComponent,
     AddRecipeComponent,
     
    
 
     
-    UserPageComponent,
+    
     FullRecipeComponent,
     BfastRecipesComponent,
     LunchRecipesComponent,

@@ -5,21 +5,30 @@ import { HttpClient } from "@angular/common/http";
 import { RecipeCardModel } from './cards/recipe-card.model';
 import { KeyValue } from '@angular/common';
 import { DataSnapshot, SnapshotAction } from '@angular/fire/compat/database/interfaces';
+import { DatabaseReference } from '@angular/fire/compat/database/interfaces';
+
 
 
 
 @Injectable (
-    {providedIn: 'root'}
+{providedIn: 'root'}
 )
-
 export class ProductsService {
 
+    private static DatabaseReference: any
+    testRecipes: RecipeCardModel[] =[]
     map: Map<RecipeCardModel, String> = new Map();
     public recipeID: string = "undefined";
     private baseUrl: string = "https://mock-recipe-default-rtdb.firebaseio.com/";
     private productsEndPoint: string = "beef.json"
     constructor (private db: AngularFireDatabase) {
     }
+
+    ngInOnIt() {
+     
+    }
+
+    
 
     // possibly use this map to store key values?
     
@@ -57,6 +66,7 @@ export class ProductsService {
        var ID = result.key!;
 
        this.map.set(product, ID);
+       
     }
 
     // this is the method to retrieve all of the recipe uploads
@@ -75,7 +85,7 @@ export class ProductsService {
        // now just need to figure out how to retrieve key
        this.db.object('/testing/' + key).remove();
        
-
+       
        // ideally, we should delete product from map after we're done
        //this.map.delete(product);
     
@@ -88,6 +98,8 @@ export class ProductsService {
     getLiveRecipes() {
         return this.db.list<RecipeCardModel>("liverecipes").valueChanges();
     }
+
+    
 
     
 

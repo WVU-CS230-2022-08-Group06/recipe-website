@@ -40,26 +40,17 @@ import { SeafoodComponent } from './seafood/seafood.component';
 import { TopNavBarComponent } from './top-nav-bar/top-nav-bar.component';
 
 
-import { UserLoginComponent } from './user-login/user-login.component';
-import { UserPageComponent } from './user-page/user-page.component';
-import { UserSignComponent } from './user-sign/user-sign.component';
 
-const routes: Routes = [ {
-  path: 'UserLoginComponent',
-  component: UserLoginComponent
-}
-, {path: '' ,component: AuthComponent}
-, {path: 'UserSignComponent', component: UserSignComponent},
+
+const routes: Routes = [ 
+ {path: '' ,component: AuthComponent}
+, 
 
 {path: 'CardsComponent', component: CardsComponent,
 children: [{path: ':name', component: FullRecipeComponent}]},
 
 {path: 'RequestRecipe', component: RequestFormComponent},
 
-{
-  path: 'UserPageComponent',
-  component: UserPageComponent
-},
 {
   path: 'AddRecipeComponent',
   component: AddRecipeComponent, canActivate: [AuthGuardService]
