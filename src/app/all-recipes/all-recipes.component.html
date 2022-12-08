@@ -4,19 +4,16 @@
 <h2 class = "specifics">The melting pot of recipes!</h2>
 
 
+
 <div class = "container-fluid d-flex flex-wrap"  style = "margin-bottom: 5rem; margin-top: 1rem">
     
     <div *ngFor = "let x of allRecipes">
         <div  *ngIf="searchText === '' || x.recipeName.toLowerCase().includes(searchText)">
-        <app-cards  recipeIngredients = {{x.ingredients}} recipeSteps = {{x.steps}} desc = {{x.desc}} recipeName = {{x.recipeName}} recipePicture = {{x.recipePicture}}
+        <app-cards [cookTime]= x.cookTime [prepTime]= x.prepTime recipeIngredients = {{x.ingredients}} recipeSteps = {{x.steps}} desc = {{x.desc}} recipeName = {{x.recipeName}} recipePicture = {{x.recipePicture}}
         category= {{x.category}} theStyle = {{x.style}} route = "/FullRecipeComponent" >
            
         </app-cards>
         </div>
-        
        
     </div>
-    
-   
-
 </div>

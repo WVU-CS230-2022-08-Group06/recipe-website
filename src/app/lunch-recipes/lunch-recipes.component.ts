@@ -29,4 +29,11 @@ export class LunchRecipesComponent implements OnInit {
   })
   }
 
+  searchText: string = '';
+  
+
+  onSearchTextEntered(searchValue: string) {
+    this.searchText = searchValue;
+  }
+
 }

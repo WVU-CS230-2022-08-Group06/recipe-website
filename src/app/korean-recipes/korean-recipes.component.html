@@ -1,18 +1,16 @@
 <app-top-nav-bar></app-top-nav-bar>
 <app-header></app-header>
+<app-search (searchTextChanged)="onSearchTextEntered($event)"></app-search>
+<h2 class = "specifics">Korean</h2>
 
-<h2 style = "text-align: center; text-decoration: underline;">ITALIAN CUISINE</h2>
-
-<div class = "container-fluid d-flex flex-wrap" style = "margin-bottom: 5rem; margin-top: 1rem">
-    <div *ngFor = "let x of koreanRecipes" >
-        
-        <app-cards recipeName = {{x.recipeName}} recipePicture = {{x.recipePicture}}
-        category= {{x.category}} theStyle = {{x.style}} >
+<div class = "container-fluid d-flex flex-wrap"  style = "margin-bottom: 5rem; margin-top: 1rem">
+    
+    <div *ngFor = "let x of koreanRecipes">
+        <div  *ngIf="searchText === '' || x.recipeName.toLowerCase().includes(searchText)">
+        <app-cards [prepTime]=x.prepTime [cookTime]= x.cookTime  recipeIngredients = {{x.ingredients}} recipeSteps = {{x.steps}} desc = {{x.desc}} recipeName = {{x.recipeName}} recipePicture = {{x.recipePicture}}
+        category= {{x.category}} theStyle = {{x.style}} route = "/FullRecipeComponent" >
            
         </app-cards>
-        
-       
+        </div>
     </div>
-   
-
 </div>

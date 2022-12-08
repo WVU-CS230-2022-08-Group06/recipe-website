@@ -29,4 +29,11 @@ export class KoreanRecipesComponent implements OnInit {
   })
   }
 
+  searchText: string = '';
+  
+
+  onSearchTextEntered(searchValue: string) {
+    this.searchText = searchValue;
+  }
+
 }

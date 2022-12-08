@@ -1,0 +1,16 @@
+<app-top-nav-bar></app-top-nav-bar>
+
+<h2 class = "specifics">Recipes to check:</h2>
+
+<div class = "container-fluid d-flex flex-wrap"  style = "margin-bottom: 5rem; margin-top: 1rem">
+    
+    <div *ngFor = "let x of inspectRecipes">
+        <app-cards [prepTime]=x.prepTime [cookTime]= x.cookTime  recipeIngredients = {{x.ingredients}} recipeSteps = {{x.steps}} desc = {{x.desc}} recipeName = {{x.recipeName}} recipePicture = {{x.recipePicture}}
+        category= {{x.category}} theStyle = {{x.style}} route = "/FullRecipeComponent" >
+        </app-cards>
+        <button class = "btn btn-primary inspect"type="submit" (click) = "accept(x)">Accept</button>
+        <button class = "btn btn-danger inspect"type = "submit" (click) = "reject(x)">Reject</button>
+    </div>
+    
+
+</div>

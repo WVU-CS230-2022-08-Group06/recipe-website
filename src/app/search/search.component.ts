@@ -1,4 +1,5 @@
 import { Component, EnvironmentInjector, EventEmitter, OnInit, Output } from '@angular/core';
+import { RecipeCardModel } from '../cards/recipe-card.model';
 
 @Component({
   selector: 'app-search',
@@ -10,6 +11,7 @@ export class SearchComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
   enteredSearchValue: string = '';

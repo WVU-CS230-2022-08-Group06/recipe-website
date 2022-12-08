@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthComponent } from '../auth/auth.component';
+import { AuthService } from '../auth/auth.service';
 import { AuthResponse } from '../auth/authResponse';
 
 @Component({
@@ -10,13 +11,16 @@ import { AuthResponse } from '../auth/authResponse';
 })
 export class TopNavBarComponent implements OnInit {
 
-  constructor(private route: Router) { }
+  constructor(private auth: AuthService) { }
 
   ngOnInit(): void {
+    this.auth.isLoggedIn = true;
   }
 
-  onClick() {
-    
+  redirect() {
+    localStorage.clear();
   }
+
+  
 
 }

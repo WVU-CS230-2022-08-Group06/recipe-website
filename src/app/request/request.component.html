@@ -2,13 +2,9 @@
 <div class = "container-fluid d-flex flex-wrap" style = "margin-bottom: 5rem; margin-top: 1rem">
     <div *ngFor = "let x of requestedRecipes" >
         
-        
-        <app-cards recom = {{x.recommend}} recipeName = {{x.recipeName}} recipePicture = {{x.recipePicture}}
-        category= {{x.category}} theStyle = {{x.style}}  >
-           
+        <app-cards [prepTime]=x.prepTime [cookTime]= x.cookTime  recipeIngredients = {{x.ingredients}} recom = {{x.recommend}} recipeName = {{x.recipeName}} 
+        recipePicture = {{x.recipePicture}} category= {{x.category}} theStyle = {{x.style}} desc = {{x.desc}} > 
         </app-cards>
-        
-       
     </div>
    
 

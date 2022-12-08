@@ -7,7 +7,7 @@
   <input type="text" ngModel minlength="5" ngModel maxlength="30" id="fname" ngModel name = "recipeName" ngModel required><br>
 
   <label for="lname">Recipe photo:</label><br>
-  <input type = "url" id="lname"  ngModel name="recipePicture"ngModel required ><br>
+  <input type = "text" id="lname"  ngModel name="recipePicture"ngModel required ><br>
 
   <label for="short">Short Description:</label><br>
   <input  type = "text" id="short" ngModel name = "desc"ngModel required><br>
@@ -20,6 +20,7 @@
   <label for = "ingred">Ingredients:</label><br>
   <textarea style = "resize: none;" ngModel name = "ingredients" id = "ingredients"  rows = "2" cols = "30"ngModel required >
   </textarea> <br>
+
 
 
   
@@ -42,10 +43,10 @@
 
 
   <label for ="prep" class = "daprep">Prep time (mins):</label><br>
-  <input type = "number" class = "times" id = "prep" ngModel name = "preptime" required><br>
+  <input type = "number" class = "times" id = "prep" ngModel name = "prepTime" required ngModel min = "1"><br>
 
   <label for ="cook" class = "dacook">Cook time (mins):&nbsp;&nbsp;</label><br>
-  <input type = "number" class = "times" id = "prep" ngModel name = "cooktime" required ngModel min="15">
+  <input type = "number" class = "times" id = "prep" ngModel name = "cookTime" required ngModel min="2">
 
 
 
@@ -54,7 +55,7 @@
     <input type="submit" class="btn btn-primary"  id="testing" name = "Upload"  ngNativeValidate>
 
     &nbsp;&nbsp;&nbsp;
-    <button type="submit"  required class="btn btn-danger"><a  style="color: white; text-decoration: none;" routerLink = "">
+    <button type="submit"  required class="btn btn-danger"><a  style="color: white; text-decoration: none;" routerLink = "/Home">
      CANCEL
     </a></button>
   </div>

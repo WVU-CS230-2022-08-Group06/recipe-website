@@ -19,6 +19,12 @@ navbar input[type=text] {
     
   }
 
+  .zoom {
+    text-decoration: none;
+    font-weight: 500;
+    color: #0d10d6;
+  }
+
 
  
 

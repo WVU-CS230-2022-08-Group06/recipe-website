@@ -15,7 +15,6 @@ export class RequestComponent implements OnInit {
     this.productsService.getRequestedProducts().subscribe((data: RecipeCardModel[])=> 
     {console.log("Fetching products");
     for(var product of data) {
-      console.log(product);
       this.requestedRecipes.push(product);
       
     }

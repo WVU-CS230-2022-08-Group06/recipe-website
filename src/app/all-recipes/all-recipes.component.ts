@@ -30,4 +30,5 @@ export class AllRecipesComponent implements OnInit {
     this.searchText = searchValue;
   }
 
+
 }

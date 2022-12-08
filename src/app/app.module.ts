@@ -41,6 +41,18 @@ import { AuthService } from './auth/auth.service';
 import { HttpClient, HttpClientModule, HttpHandler } from '@angular/common/http';
 import { SignUpComponent } from './auth/sign-up/sign-up.component';
 import { SearchComponent } from './search/search.component';
+import { QuickComponent } from './quick/quick.component';
+import { BeefComponent } from './beef/beef.component';
+import { ChickenComponent } from './chicken/chicken.component';
+import { SeafoodComponent } from './seafood/seafood.component';
+import { PastaComponent } from './pasta/pasta.component';
+import { FruitVegComponent } from './fruit-veg/fruit-veg.component';
+import { AuthGuardService } from './auth/auth-guard.service';
+import { ModeratorComponent } from './moderator/moderator.component';
+import { InspectRecipesComponent } from './inspect-recipes/inspect-recipes.component';
+import { ModeratorGuard } from './auth/moderator-guard';
+import { GoLiveComponent } from './go-live/go-live.component';
+import { LiveCardsComponent } from './live-cards/live-cards.component';
 
 
 
@@ -80,6 +92,16 @@ import { SearchComponent } from './search/search.component';
     AuthComponent,
     SignUpComponent,
     SearchComponent,
+    QuickComponent,
+    BeefComponent,
+    ChickenComponent,
+    SeafoodComponent,
+    PastaComponent,
+    FruitVegComponent,
+    ModeratorComponent,
+    InspectRecipesComponent,
+    GoLiveComponent,
+    LiveCardsComponent,
 
     
     
@@ -92,7 +114,7 @@ import { SearchComponent } from './search/search.component';
     AngularFirestoreModule,
     HttpClientModule
   ],
-  providers: [AuthService, HttpClient],
+  providers: [AuthService, HttpClient, AuthGuardService, ModeratorGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

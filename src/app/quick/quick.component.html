@@ -1,0 +1,21 @@
+<app-top-nav-bar></app-top-nav-bar>
+<app-header></app-header>
+<app-search (searchTextChanged)="onSearchTextEntered($event)"></app-search>
+<h2 class = "specifics">Meals in under 30 minutes!</h2>
+
+<div class = "container-fluid d-flex flex-wrap"  style = "margin-bottom: 5rem; margin-top: 1rem">
+    
+    <div *ngFor = "let x of quickRecipes">
+        <div  *ngIf="searchText === '' || x.recipeName.toLowerCase().includes(searchText)">
+        <app-cards  recipeIngredients = {{x.ingredients}} recipeSteps = {{x.steps}} desc = {{x.desc}} recipeName = {{x.recipeName}} recipePicture = {{x.recipePicture}}
+        category= {{x.category}} theStyle = {{x.style}} route = "/FullRecipeComponent" >
+           
+        </app-cards>
+        </div>
+        
+       
+    </div>
+    
+   
+
+</div>
