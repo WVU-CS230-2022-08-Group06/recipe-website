@@ -7,7 +7,7 @@
     
     <div *ngFor = "let x of quickRecipes">
         <div  *ngIf="searchText === '' || x.recipeName.toLowerCase().includes(searchText)">
-        <app-cards  recipeIngredients = {{x.ingredients}} recipeSteps = {{x.steps}} desc = {{x.desc}} recipeName = {{x.recipeName}} recipePicture = {{x.recipePicture}}
+        <app-cards user = {{x.creatorName}} recipeIngredients = {{x.ingredients}} recipeSteps = {{x.steps}} desc = {{x.desc}} recipeName = {{x.recipeName}} recipePicture = {{x.recipePicture}}
         category= {{x.category}} theStyle = {{x.style}} route = "/FullRecipeComponent" >
            
         </app-cards>

@@ -23,10 +23,10 @@ export class AddRecipeComponent implements OnInit {
   addRecipe(product: RecipeCardModel, form: NgForm): void {
     
     if (this.validate(form)) {
+      product.creatorName = localStorage.getItem('userEmail')!;
       this.ps.addRequestedRecipes(product);
-
       form.reset();
-      if (localStorage.getItem('moderatorEmail') == "haughtluka256@gmail.com") {
+      if (localStorage.getItem('userEmail') == "haughtluka256@gmail.com") {
         this.router.navigate(['/Mod']);
       }
       else {

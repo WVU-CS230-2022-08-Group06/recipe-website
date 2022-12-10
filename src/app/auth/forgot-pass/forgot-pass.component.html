@@ -1,0 +1,18 @@
+<div class = "mountaineer">
+    <div class="wrapper WVU h-200 w-150">
+        <div class="form-container" style = "text-align: center; margin: auto;"> 
+            <h2 style = "color: #0a0db9;">Enter your email address.</h2>
+           <div class="form-inner" >
+              <form #authForm = "ngForm" (ngSubmit) = "onSubmit(authForm)">
+                 <div class="field">
+                    <input type="email" ngModel name = "email" id = "email"placeholder="Email Address" required >
+                 </div>
+                 <div class="field btn">
+                    <div class="btn-layer"></div>
+                    <input type="submit" value="Submit">
+                 </div>
+              </form>
+           </div>
+        </div>
+     </div>
+    </div>

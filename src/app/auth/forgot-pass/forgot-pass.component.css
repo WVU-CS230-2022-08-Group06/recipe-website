@@ -46,9 +46,8 @@ div.WVU {
   background-color: rgb(248, 206, 19);
   margin-top: 5.5rem;
   width: 45rem;
-  outline-color: #0a0db9;
-
 }
+
 div.mountaineer {
   height: 100vh;
   background-image: url('https://www.commonapp.org/static/7f8c74a6bcbfcc1370b7243e445348dc/west-virginia-university_678.jpg');
@@ -71,6 +70,10 @@ div.mountaineer {
   justify-content: space-between;
   border: 1px solid lightgrey;
   border-radius: 5px;
+}
+
+body {
+  background-color: red;
 }
 
 

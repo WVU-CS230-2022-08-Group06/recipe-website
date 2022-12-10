@@ -11,10 +11,10 @@ export class ModeratorGuard implements CanActivate {
     canActivate(): boolean {
         if (localStorage.getItem('accessToken') != null) {
             //this.router.navigate(['/Home']);
-            if (localStorage.getItem('moderatorEmail') == "haughtluka256@gmail.com") {
+            if (localStorage.getItem('userEmail') == "haughtluka256@gmail.com") {
                 return true;
             }
-            alert("Page is only accessibly by moderators.");
+            alert("You do not have access to this page. Good try ;)");
             this.router.navigate(['/Home']);
             return false;
         }

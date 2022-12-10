@@ -30,13 +30,14 @@ export class InspectRecipesComponent implements OnInit {
   accept(product: RecipeCardModel) {
     this.productsService.addProducts(product),
     this.productsService.removeRequest(product);
+    window.location.reload();
     
   }
 
   // in this case, we simply remove it and don't push to front-end
   reject(product: RecipeCardModel) {
     this.productsService.removeRequest(product);
-    
+    window.location.reload();
   }
 
 }

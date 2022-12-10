@@ -1,10 +1,10 @@
 <h2 class = "design">Recommended recipes!</h2>
 <div class = "container-fluid d-flex flex-wrap" style = "margin-bottom: 5rem; margin-top: 1rem">
     <div *ngFor = "let x of requestedRecipes" >
-        
         <app-cards [prepTime]=x.prepTime [cookTime]= x.cookTime  recipeIngredients = {{x.ingredients}} recom = {{x.recommend}} recipeName = {{x.recipeName}} 
         recipePicture = {{x.recipePicture}} category= {{x.category}} theStyle = {{x.style}} desc = {{x.desc}} > 
         </app-cards>
+        <button type = "submit" class = "btn btn-danger edit" (click) = "saveRecipe(x)">Save recipe</button>
     </div>
    
 

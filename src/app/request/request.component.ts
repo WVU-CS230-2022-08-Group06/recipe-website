@@ -22,4 +22,8 @@ export class RequestComponent implements OnInit {
   })
   }
 
+  saveRecipe(product: RecipeCardModel) {
+    
+  }
+
 }

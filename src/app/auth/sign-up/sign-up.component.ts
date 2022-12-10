@@ -32,7 +32,7 @@ export class SignUpComponent implements OnInit {
    }
    else {
     const value = {
-      x: (data: AuthResponse) => this.route.navigate(['']),
+      x: (data: AuthResponse) => {alert("Account successfully created!"),this.route.navigate([''])},
       error: (err: Error) => alert("Account credentials already exists.")
       
     };

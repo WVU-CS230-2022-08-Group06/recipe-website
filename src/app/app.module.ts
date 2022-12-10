@@ -53,6 +53,9 @@ import { InspectRecipesComponent } from './inspect-recipes/inspect-recipes.compo
 import { ModeratorGuard } from './auth/moderator-guard';
 import { GoLiveComponent } from './go-live/go-live.component';
 import { LiveCardsComponent } from './live-cards/live-cards.component';
+import { ModNavbarComponent } from './mod-navbar/mod-navbar.component';
+import { ForgotPassComponent } from './auth/forgot-pass/forgot-pass.component';
+import { AngularFireAuth, AngularFireAuthModule } from '@angular/fire/compat/auth';
 
 
 
@@ -101,6 +104,8 @@ import { LiveCardsComponent } from './live-cards/live-cards.component';
     InspectRecipesComponent,
     GoLiveComponent,
     LiveCardsComponent,
+    ModNavbarComponent,
+    ForgotPassComponent,
 
     
     
@@ -110,6 +115,7 @@ import { LiveCardsComponent } from './live-cards/live-cards.component';
     AppRoutingModule,
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
     AngularFirestoreModule,
     HttpClientModule
   ],

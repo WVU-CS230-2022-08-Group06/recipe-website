@@ -5,6 +5,7 @@ import { AllRecipesComponent } from './all-recipes/all-recipes.component';
 import { AmericanRecipesComponent } from './american-recipes/american-recipes.component';
 import { AuthGuardService } from './auth/auth-guard.service';
 import { AuthComponent } from './auth/auth.component';
+import { ForgotPassComponent } from './auth/forgot-pass/forgot-pass.component';
 import { ModeratorGuard } from './auth/moderator-guard';
 import { SignUpComponent } from './auth/sign-up/sign-up.component';
 import { BeefComponent } from './beef/beef.component';
@@ -49,7 +50,7 @@ const routes: Routes = [
 {path: 'CardsComponent', component: CardsComponent,
 children: [{path: ':name', component: FullRecipeComponent}]},
 
-{path: 'RequestRecipe', component: RequestFormComponent},
+{path: 'RequestRecipe', component: RequestFormComponent, canActivate: [AuthGuardService]},
 
 {
   path: 'AddRecipeComponent',
@@ -58,60 +59,61 @@ children: [{path: ':name', component: FullRecipeComponent}]},
 
 {
   path: 'FullRecipeComponent',
-  component: FullRecipeComponent, data: {recipeName: 'blank'}
+  component: FullRecipeComponent, data: {recipeName: 'blank'}, canActivate:[AuthGuardService]
   
 },
 {
   path: 'AmericanRecipes',
-  component: AmericanRecipesComponent
+  component: AmericanRecipesComponent, canActivate: [AuthGuardService]
 },
 {
   path: 'KoreanRecipes',
-  component: KoreanRecipesComponent
+  component: KoreanRecipesComponent, canActivate: [AuthGuardService]
 },
 {
   path: 'AllRecipes',
-  component: AllRecipesComponent
+  component: AllRecipesComponent, canActivate: [AuthGuardService]
 },
 {
   path: 'BreakfastRecipes',
-  component: BfastRecipesComponent
+  component: BfastRecipesComponent, canActivate: [AuthGuardService]
 },
 {
   path: 'MexicanRecipes',
-  component: MexicanRecipesComponent
+  component: MexicanRecipesComponent, canActivate: [AuthGuardService]
 },
 {
   path: 'IndianRecipes',
-  component: IndianRecipesComponent
+  component: IndianRecipesComponent, canActivate: [AuthGuardService]
 },
 {
   path: 'ChineseRecipes',
-  component: ChineseRecipesComponent
+  component: ChineseRecipesComponent, canActivate: [AuthGuardService]
 },
 {
   path: 'LunchRecipes',
-  component: LunchRecipesComponent
+  component: LunchRecipesComponent, canActivate: [AuthGuardService]
 },
 {
   path: 'DinnerRecipes',
-  component: DinnerRecipesComponent
+  component: DinnerRecipesComponent, canActivate: [AuthGuardService]
 },
 {
   path: 'DessertRecipes',
-  component: DessertRecipesComponent
+  component: DessertRecipesComponent, canActivate: [AuthGuardService]
 },
 {path: 'Home', component: HomeLayoutComponent, canActivate: [AuthGuardService]},
 {path: 'SignUp', component: SignUpComponent},
-{path: 'Quick', component: QuickComponent},
-{path: 'Seafood', component: SeafoodComponent},
-{path: 'Pasta', component: PastaComponent},
-{path: 'Chicken', component: ChickenComponent},
-{path: 'Fruits', component: FruitVegComponent},
-{path: 'Beef', component: BeefComponent},
+{path: 'Quick', component: QuickComponent, canActivate: [AuthGuardService]},
+{path: 'Seafood', component: SeafoodComponent, canActivate: [AuthGuardService]},
+{path: 'Pasta', component: PastaComponent, canActivate: [AuthGuardService]},
+{path: 'Chicken', component: ChickenComponent, canActivate: [AuthGuardService]},
+{path: 'Fruits', component: FruitVegComponent, canActivate: [AuthGuardService]},
+{path: 'Beef', component: BeefComponent, canActivate: [AuthGuardService]},
 {path: 'Mod', component: ModeratorComponent, canActivate: [ModeratorGuard]},
-{path: 'InspectRecipes', component: InspectRecipesComponent},
-{path: 'Golive', component: GoLiveComponent}
+{path: 'InspectRecipes', component: InspectRecipesComponent, canActivate: [ModeratorGuard]},
+{path: 'Golive', component: GoLiveComponent, canActivate: [AuthGuardService]},
+{path: 'Recover', component: ForgotPassComponent}
 ];
 
 @NgModule({

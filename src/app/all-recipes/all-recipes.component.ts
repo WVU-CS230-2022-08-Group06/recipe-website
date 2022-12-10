@@ -17,7 +17,6 @@ export class AllRecipesComponent implements OnInit {
     this.productsService.getProducts().subscribe((data: RecipeCardModel[])=> 
     {console.log("Fetching products");
     for(var product of data) {
-      console.log(product);
       this.allRecipes.push(product);
     }
   })

@@ -4,3 +4,11 @@ h2.design {
     font-size: 50px;
     margin-top: 7.25rem;
 }
+
+.edit {
+    margin-left: 12rem;
+    position: absolute;
+    top: 67.48rem;
+    width: 7rem;
+    border-radius: 2rem;
+}

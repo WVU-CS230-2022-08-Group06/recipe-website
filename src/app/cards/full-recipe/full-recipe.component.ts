@@ -20,6 +20,7 @@ export class FullRecipeComponent   implements OnInit {
 @Input() rIngred: string;
 @Input() prep: number;
 @Input() cook: number;
+@Input() user: string;
  
   constructor(private route: ActivatedRoute) { 
   this.rName = "blank";
@@ -31,6 +32,7 @@ export class FullRecipeComponent   implements OnInit {
   this.rIngred = "blank";
   this.prep = 0;
   this.cook = 0;
+  this.user = "none"
   }
  
    ngOnInit(): void {
@@ -43,6 +45,7 @@ export class FullRecipeComponent   implements OnInit {
     this.rPic = this.route.snapshot.params['picToPass'];
     this.prep = this.route.snapshot.params['prepToPass'];
     this.cook = this.route.snapshot.params['cookToPass'];
+    this.user = this.route.snapshot.params['userToPass'];
 }
 }
 
