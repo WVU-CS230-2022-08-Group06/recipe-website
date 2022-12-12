@@ -5,16 +5,28 @@
     <div class="row">
         
         <h1 class = "type--lion">{{rName}}</h1>
+        <div *ngIf="recipeNotSaved()">
+        <button class = "btn btn-primary" (click) = "saveRecipe()"type = "submit">Save this recipe!</button>
+        </div>
+
+        <div *ngIf = "toDelete()">
+            <button class = "btn btn-danger" type = "submit" (click) = "deleteRecipe()">
+                Unsave recipe
+            </button>
+        </div>
 
         <h3 class = "style-meal">{{rStyle}} {{rMeal}}</h3><br>
        
         <img alt = "" src = "{{rPic}}" class = "images"><br>
         
         <p>Uploaded by: {{user}}</p>
-        <p>Prep time: {{prep}}</p>
-        <p>Cook time: {{cook}}</p>
 
-        <p class = "desc">{{rDesc}}</p>
+        <p class = "dark">Prep time: </p><br>
+        <p>{{prep}} mins.</p>
+
+        <p class = "dark">Cook time: </p><br>
+        <p>{{cook}} mins.</p>
+        
        
         
         <h3>Ingredients:</h3><br>

@@ -11,9 +11,6 @@ import { KeyValue } from '@angular/common';
 )
 export class ProductsService {
 
-   
-    
-    public recipeID: string = "undefined";
     private baseUrl: string = "https://mock-recipe-default-rtdb.firebaseio.com/";
     private productsEndPoint: string = "beef.json"
     constructor (private db: AngularFireDatabase) {
@@ -23,13 +20,6 @@ export class ProductsService {
         
      
     }
-
-    
-
-    // possibly use this map to store key values?
-    
-    
-    
 
     // this is how we retrieve ALL recipes
     getProducts() {
@@ -73,12 +63,21 @@ export class ProductsService {
     
     }
 
-    addLiveRecipes(product: RecipeCardModel) {
-        this.db.list<RecipeCardModel>("liverecipes").push(product);
+
+    addSavedRecipes(product: RecipeCardModel) {
+        var end = product.savedBy.indexOf(".");
+        var user = product.savedBy.substring(0, end);
+        this.db.list<RecipeCardModel>("savedrecipes").set(user + product.recipeName, product);
     }
 
-    getLiveRecipes() {
-        return this.db.list<RecipeCardModel>("liverecipes").valueChanges();
+    getSavedRecipes() {
+        return this.db.list<RecipeCardModel>("savedrecipes").valueChanges();
+    }
+
+    removeSavedRecipe(product: RecipeCardModel) {
+        var end = product.savedBy.indexOf(".");
+        var user = product.savedBy.substring(0, end);
+        this.db.object('/savedrecipes/' + user + product.recipeName).remove();
     }
 
 }

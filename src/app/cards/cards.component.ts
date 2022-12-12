@@ -25,6 +25,8 @@ export class CardsComponent implements OnInit {
  @Input() cookTime: number;
  @Input() prepTime: number;
  @Input() user: string;
+ @Input() save: string;
+ @Input() canDelete: string;
  
 
  cards$ : RecipeCardModel[] =[];
@@ -42,6 +44,8 @@ export class CardsComponent implements OnInit {
   this.prepTime = 0;
   this.cookTime = 0;
   this.user = "none";
+  this.save = "";
+  this.canDelete = "false";
   }
 
   ngOnInit(): void {
@@ -63,7 +67,9 @@ export class CardsComponent implements OnInit {
         ingredToPass: this.recipeIngredients,
         cookToPass: this.cookTime,
         prepToPass: this.prepTime,
-        userToPass: this.user
+        userToPass: this.user,
+        saveToPass: this.save,
+        deleteToPass: this.canDelete
       };
     
     this.router.navigate(['FullRecipeComponent', data]);

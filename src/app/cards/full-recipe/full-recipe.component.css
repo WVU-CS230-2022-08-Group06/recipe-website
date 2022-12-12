@@ -7,6 +7,9 @@ h1.type--lion {
     margin-bottom:1rem;
     
 }
+.dark {
+    font-weight: 500;
+}
 
 div.laser {
     margin-top: 5rem;

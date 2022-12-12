@@ -20,7 +20,7 @@ import { ChineseRecipesComponent } from './chinese-recipes/chinese-recipes.compo
 import { DessertRecipesComponent } from './dessert-recipes/dessert-recipes.component';
 import { DinnerRecipesComponent } from './dinner-recipes/dinner-recipes.component';
 import { FruitVegComponent } from './fruit-veg/fruit-veg.component';
-import { GoLiveComponent } from './go-live/go-live.component';
+
 
 
 
@@ -37,6 +37,7 @@ import { QuickComponent } from './quick/quick.component';
 
 
 import { RequestFormComponent } from './request-form/request-form.component';
+import { SavedRecipesComponent } from './saved-recipes/saved-recipes.component';
 import { SeafoodComponent } from './seafood/seafood.component';
 import { TopNavBarComponent } from './top-nav-bar/top-nav-bar.component';
 
@@ -112,8 +113,8 @@ children: [{path: ':name', component: FullRecipeComponent}]},
 {path: 'Beef', component: BeefComponent, canActivate: [AuthGuardService]},
 {path: 'Mod', component: ModeratorComponent, canActivate: [ModeratorGuard]},
 {path: 'InspectRecipes', component: InspectRecipesComponent, canActivate: [ModeratorGuard]},
-{path: 'Golive', component: GoLiveComponent, canActivate: [AuthGuardService]},
-{path: 'Recover', component: ForgotPassComponent}
+{path: 'Recover', component: ForgotPassComponent},
+{path: 'SavedRecipes', component: SavedRecipesComponent, canActivate: [AuthGuardService]}
 ];
 
 @NgModule({

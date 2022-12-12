@@ -11,12 +11,12 @@ export class RecipeCardModel
     prepTime: number;
     // may or may not use this? would use it for the name of who recommended a recipe
     recommend: string | undefined;
-    productID: string;
     creatorName: string;
+    savedBy: string;
 
 
     constructor(recipePicture: string, desc:string, recipeName: string, ingredients: String, style: string, category: string, steps: string,
-        recommend: string, cook: number, prep: number, ID: string, creator: string) 
+        recommend: string, cook: number, prep: number, creator: string, save: string) 
     {
         this.recipePicture = recipePicture;
         this.desc = desc;
@@ -28,8 +28,8 @@ export class RecipeCardModel
         this.recommend = recommend;
         this.cookTime = cook;
         this.prepTime = prep;
-        this.productID = ID;
         this.creatorName = creator;
+        this.savedBy = save;
 
     }
 }

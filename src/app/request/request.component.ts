@@ -23,7 +23,7 @@ export class RequestComponent implements OnInit {
   }
 
   saveRecipe(product: RecipeCardModel) {
-    
+    this.productsService.addSavedRecipes(product);
   }
 
 }

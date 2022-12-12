@@ -51,11 +51,10 @@ import { AuthGuardService } from './auth/auth-guard.service';
 import { ModeratorComponent } from './moderator/moderator.component';
 import { InspectRecipesComponent } from './inspect-recipes/inspect-recipes.component';
 import { ModeratorGuard } from './auth/moderator-guard';
-import { GoLiveComponent } from './go-live/go-live.component';
-import { LiveCardsComponent } from './live-cards/live-cards.component';
 import { ModNavbarComponent } from './mod-navbar/mod-navbar.component';
 import { ForgotPassComponent } from './auth/forgot-pass/forgot-pass.component';
 import { AngularFireAuth, AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { SavedRecipesComponent } from './saved-recipes/saved-recipes.component';
 
 
 
@@ -102,10 +101,10 @@ import { AngularFireAuth, AngularFireAuthModule } from '@angular/fire/compat/aut
     FruitVegComponent,
     ModeratorComponent,
     InspectRecipesComponent,
-    GoLiveComponent,
-    LiveCardsComponent,
+    
     ModNavbarComponent,
     ForgotPassComponent,
+    SavedRecipesComponent,
 
     
     
