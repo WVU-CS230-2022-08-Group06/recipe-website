@@ -79,6 +79,7 @@ saveRecipe() {
     this.rMeal, this.rSteps, "", this.cook, this.prep, this.user, localStorage.getItem('userEmail')!);
     this.ps.addSavedRecipes(product);
     alert("Recipe saved to your profile!");
+    window.location.reload();
 }
 
 // this method needs to return true in order for the "Save Recipe" button to appear

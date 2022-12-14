@@ -55,6 +55,9 @@ import { ModNavbarComponent } from './mod-navbar/mod-navbar.component';
 import { ForgotPassComponent } from './auth/forgot-pass/forgot-pass.component';
 import { AngularFireAuth, AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { SavedRecipesComponent } from './saved-recipes/saved-recipes.component';
+import { CommentsComponent } from './comments/comments/comments.component';
+import { CommentComponent } from './comments/comments/comment/comment.component';
+import { CommentFormComponent } from './comments/comments/comment-form/comment-form.component';
 
 
 
@@ -105,6 +108,9 @@ import { SavedRecipesComponent } from './saved-recipes/saved-recipes.component';
     ModNavbarComponent,
     ForgotPassComponent,
     SavedRecipesComponent,
+    CommentsComponent,
+    CommentComponent,
+    CommentFormComponent,
 
     
     

@@ -1,0 +1,13 @@
+<div *ngIf="comments$ | async as comments">
+    <ul class="comments-list">
+      <li *ngFor="let comment of comments; let i = index">
+        <app-comment [comment]="comment" [comments]="comments" [index]="i">
+        </app-comment>
+      </li>
+    </ul>
+    <p class="fst-italic text-black-50" *ngIf="comments.length === 0">
+      No comments to display
+    </p>
+    <app-comment-form [comments]="comments"></app-comment-form>
+  </div>
+  

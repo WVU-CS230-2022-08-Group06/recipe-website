@@ -1,0 +1,33 @@
+<form #form="ngForm" (submit)="postComment(form, comment.id)">
+    <div class="form-group">
+      <textarea
+        id="commentInput"
+        #commentBox="ngModel"
+        [ngModel]="comment.text"
+        class="form-control mb-2"
+        name="commentBox"
+        (focus)="isCommentInEditMode = true"
+        trim="blur"
+        maxlength="100"
+        placeholder="Enter your comment"
+      ></textarea>
+      <button
+        type="submit"
+        id="buttonSubmit"
+        class="btn btn-primary mr-2"
+        
+      >
+        Save
+      </button>
+      <button
+        type="button"
+        id="buttonCancel"
+        class="btn btn-link"
+        (click)="cancelComment(false)"
+        *ngIf="isCommentInEditMode"
+      >
+        Cancel
+      </button>
+    </div>
+  </form>
+  

@@ -1,0 +1,13 @@
+<p *ngIf="!isCommentInEditMode" class="comment">{{ comment.text }}</p>
+<app-comment-form
+  *ngIf="isCommentInEditMode"
+  [comment]="comment"
+  [comments]="comments"
+  [index]="index"
+  [isCommentInEditMode]="isCommentInEditMode"
+  (commentEditModeChanged)="disableCommentEditMode($event)"
+>
+</app-comment-form>
+<div *ngIf="!isCommentInEditMode">
+  <a (click)="editComment()">Edit</a> | <a (click)="deleteComment()">Delete</a>
+</div>
