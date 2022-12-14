@@ -1,10 +1,11 @@
 form.design {
-    background-color: rgb(231, 227, 227);
-    margin: 0 auto;
-    width: 550px;
+    background-color: rgb(231, 227, 227); 
+    margin: auto;
+    width: 45rem;
     height: 40rem;
     text-align: center;
     border-style:hidden;
+    margin-top: -1rem;
    
     
 }
@@ -16,19 +17,26 @@ form.design {
 }
 .daprep {
     position: absolute;
-    bottom:8.4rem;
+    bottom:8.75rem;
     left:39rem
+   
 
 }
 .dacook {
     position: absolute;
-    bottom:5.35rem;
+    bottom:5.65rem;
     left:39rem;
     font-size: 15px;
 }
 .times {
     width: 75px;
     height: 25px
+}
+.warning {
+    text-align: center;
+    margin-top: -1.75rem;
+    margin-bottom: 1.05rem;
+    font-style: italic;
 }
 
 div.cool {

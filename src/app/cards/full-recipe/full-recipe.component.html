@@ -18,8 +18,7 @@
         <h3 class = "style-meal">{{rStyle}} {{rMeal}}</h3><br>
        
         <img alt = "" src = "{{rPic}}" class = "images"><br>
-        
-        <p>Uploaded by: {{user}}</p>
+        <p class = "steps">{{rDesc}}</p>
 
         <p class = "dark">Prep time: </p><br>
         <p>{{prep}} mins.</p>
@@ -27,13 +26,17 @@
         <p class = "dark">Cook time: </p><br>
         <p>{{cook}} mins.</p>
         
-       
-        
         <h3>Ingredients:</h3><br>
-        <p class = "steps">{{rIngred}}</p>
+
+        <div *ngFor = "let x of ingredients">
+            <ul>
+                <li class = "steps">{{x}}</li>
+            </ul>
+        </div>
 
         <h3 >Recipe steps:</h3><br>
-        <p class = "steps">{{rSteps}}</p>
+        <p class = "steps">{{firstHalf}}</p><br>
+        <p class = "steps" >{{rSteps.substring(firstHalf.length)}}</p>
         
     </div>
 </div>

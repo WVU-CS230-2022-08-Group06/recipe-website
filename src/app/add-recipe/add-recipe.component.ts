@@ -12,13 +12,10 @@ import { ProductsService } from '../products-service';
 })
 export class AddRecipeComponent implements OnInit {
 
-  public map: Map<RecipeCardModel, String> = new Map();
   constructor(private ps: ProductsService, private router: Router) { }
 
   ngOnInit(): void {
   }
-
-  
 
   addRecipe(product: RecipeCardModel, form: NgForm): void {
     
@@ -34,7 +31,6 @@ export class AddRecipeComponent implements OnInit {
       }
       
     }
-    //this.ps.addProducts(product);
     
   }
   validate(x: NgForm): boolean {
@@ -45,6 +41,15 @@ export class AddRecipeComponent implements OnInit {
       return true;
     }
     return false;
+  }
+
+  cancel() {
+    if (localStorage.getItem('userEmail') == "haughtluka256@gmail.com") {
+      this.router.navigate(['/Mod']);
+    }
+    else {
+      this.router.navigate(['/Home']);
+    }
   }
 
 

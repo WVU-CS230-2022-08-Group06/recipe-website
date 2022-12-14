@@ -1,9 +1,19 @@
-
+<!--
+   This is the form used for logging in
+   Provides an option to sign up
+   Also allows users to recover their password
+-->
 <div class = "mountaineer">
    <div class="wrapper WVU h-200 w-150" >
        <div class="form-container" style = "text-align: center; "> 
            <h2 style = "color: #0a0db9;">WVU Recipes!</h2>
           <div class="form-inner" >
+            <!--
+               Below is the form itself
+               each field has ngModel name, which is the name it'll be given in database
+               We retrieve the email and password of a user
+               The method onSubmit() takes the form input, validates it, and passes to backend
+            -->
              <form #authForm = "ngForm" (ngSubmit) = "onSubmit(authForm)">
                 <div class="field">
                    <input type="email" ngModel name = "email" id = "email"placeholder="Email Address" required >
@@ -11,13 +21,23 @@
                 <div class="field">
                    <input type="password" ngModel name = "password" id = "password"placeholder="Password" required>
                 </div>
+                <!--
+                  This link allows users to recover and reset their password
+                -->
                 <div class="pass-link" style = "color: yellow;">
                    <a routerLink = "/Recover">Forgot password?</a>
                 </div>
+                <!--
+                  This button allows a user to login
+                  If successful, they will be router to home page
+                -->
                 <div class="field btn">
                    <div class="btn-layer"></div>
                    <input id = "theLogin"type="submit" value="Login">
                 </div>
+                <!--
+                  If this link is clicked, we route to the sign-up page
+                -->
                 <div class="signup-link">
                    Not a member? <a routerLink = "/SignUp">Signup now</a>
                 </div>

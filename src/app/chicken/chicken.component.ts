@@ -9,20 +9,25 @@ import { ProductsService } from '../products-service';
 })
 export class ChickenComponent implements OnInit {
 
+  /*
+  "chicken" is an array that will hold all recipes that contain chicken
+  in the HTML file of this component, this array will be used to display all the chicken recipes
+  */
   chicken: RecipeCardModel[] =[]
   constructor(private productsService: ProductsService) { }
 
+  // we call a method from our products service
+  // "getProducts" retrieves all accepted recipes
   ngOnInit(): void {
-
     this.productsService.getProducts().subscribe((data: RecipeCardModel[])=> 
-    {console.log("Fetching products");
+    {
     for(var product of data) {
-      //console.log(product);
-      // perhaps for low calorie and quick meals
-      // simply check first that product.cals <= 500 && (product.prepTime + product.cookTime) <= 30 mins
-      if (product.ingredients.includes("chicken")) {
+      // we check to see if chicken is one of the ingredients or simply in the recipe name
+      // if so, we add it to our array
+      if (product.ingredients.includes("chicken") || product.recipeName.includes("chicken")) {
       this.chicken.push(product);
       }
+      // if it doesn't, we simply move on to the other recipes
       else {
         continue;
       }
@@ -30,9 +35,13 @@ export class ChickenComponent implements OnInit {
   })
   }
 
+  // we initialize an empty string
+  // will be used in the method below
   searchText: string = '';
-  
 
+  // this method is called to keep track of the changing search bar input
+  // the search bar input will be equal to this method
+  // method will take $event as a parameter
   onSearchTextEntered(searchValue: string) {
     this.searchText = searchValue;
   }

@@ -1,15 +1,32 @@
+<!--
+    This HTML code is for the "Quick & Ready" component of the app
+    Uses a loop to display all of the recipes that meet the criteria
+-->
 <app-top-nav-bar></app-top-nav-bar>
 <app-header></app-header>
+<!--
+    when the search bar class is called, we set the search bar input to a method from the search class
+    This way, the changing input is actively being recorded if a user enters or removes characters
+    only recipe names that match the search bar input are displayed
+-->
 <app-search (searchTextChanged)="onSearchTextEntered($event)"></app-search>
 <h2 class = "specifics">Meals in under 30 minutes!</h2>
 
 <div class = "container-fluid d-flex flex-wrap"  style = "margin-bottom: 5rem; margin-top: 1rem">
     
+    <!--
+        quickRecipes is an array of recipes
+        recipes that made it into this array had a combined time of <= 30 mins
+        recipes were pulled from the list that holds all accepted recipes
+    -->
     <div *ngFor = "let x of quickRecipes">
+       <!--
+        cards will only display if the "if" condition is true
+        recipe name, converted to lowercase, has to match searchText (search bar input)
+       -->
         <div  *ngIf="searchText === '' || x.recipeName.toLowerCase().includes(searchText)">
         <app-cards user = {{x.creatorName}} recipeIngredients = {{x.ingredients}} recipeSteps = {{x.steps}} desc = {{x.desc}} recipeName = {{x.recipeName}} recipePicture = {{x.recipePicture}}
         category= {{x.category}} theStyle = {{x.style}} route = "/FullRecipeComponent" >
-           
         </app-cards>
         </div>
         

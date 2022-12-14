@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!-- Footer -->
 <body class="d-flex flex-column min-vh-100">
-<nav class="navbar-fixed-bottom; text-center text-lg-start text-muted; mt-auto" style="background-color: #4e4e4e;">
+<nav class="navbar-fixed-bottom; bg-warning text-center text-lg-start text-muted; mt-auto" >
     
       <!-- Left -->
   
@@ -36,64 +36,69 @@
         <!-- Grid row -->
         <div class="row mt-3">
           <!-- Grid column -->
-          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-2">
             <!-- Content -->
-            <h6 class="text fw-bold mb-4" style="color: #f6f7f8;  font-size:medium">
-                Helpful Links
+            <h6 class="text fw-bold mb-4" style="color: #0d10d6;  font-size:medium">
+                Ingredients
               </h6>
               <p>
-                <a href="#!" class="nav-link" style="color: #c6c7c9; font-size:small">History</a>
+                <a routerLink = "/Beef" class="nav-link" style="color: #0d10d6; font-size:small">Beef</a>
               </p>
               <p>
-                <a href="#!" class="nav-link" style="color: #c6c7c9;  font-size:small">Preferences</a>
+                <a routerLink = "/Chicken" class="nav-link" style="color: #0d10d6;  font-size:small">Chicken</a>
               </p>
               <p>
-                <a href="#!" class="nav-link" style="color: #c6c7c9;  font-size:small">Upload a Recipe</a>
+                <a routerLink = "/Seafood" class="nav-link" style="color: #0d10d6;  font-size:small">Seafood</a>
               </p>
               <p>
-                <a href="#!" class="nav-link" style="color: #c6c7c9;  font-size:small">Get Support</a>
+                <a routerLink = "/Fruits" class="nav-link" style="color: #0d10d6;  font-size:small">Fruits & Vegetables</a>
               </p>
+              <p>
+                <a routerLink = "/Pasta" class="nav-link" style="color: #0d10d6;  font-size:small">Pasta</a>
+              </p>
+              
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-2">
+            <!-- Links -->
+            <h6 class="text fw-bold mb-4" style="color: #0d10d6;  font-size:medium">
+              Meals
+            </h6>
+            <p>
+                <a routerLink = "/ChineseRecipes" class="nav-link" style="color: #0d10d6; font-size:small">Chinese</a>
+              </p>
+              <p>
+                <a routerLink = "/AmericanRecipes" class="nav-link" style="color: #0d10d6;  font-size:small">American</a>
+              </p>
+              <p>
+              <p>
+                <a routerLink = "/KoreanRecipes" class="nav-link" style="color: #0d10d6; font-size:small">Korean</a>
+              </p>
+              <p>
+                <a routerLink = "/IndianRecipes" class="nav-link" style="color: #0d10d6;  font-size:small">Indian</a>
+              </p>
+              <p>
+                <a routerLink = "/MexicanRecipes" class="nav-link" style="color: #0d10d6;  font-size:small">Mexican</a>
+              </p>
+
           </div>
           <!-- Grid column -->
   
           <!-- Grid column -->
           <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
             <!-- Links -->
-            <h6 class="text fw-bold mb-4" style="color: #f6f7f8;  font-size:medium">
-              About
-            </h6>
-            <p>
-                <a href="#!" class="nav-link" style="color: #c6c7c9; font-size:small">About</a>
-              </p>
-              <p>
-                <a href="#!" class="nav-link" style="color: #c6c7c9;  font-size:small">Press</a>
-              </p>
-              <p>
-              <p>
-                <a href="#!" class="nav-link" style="color: #c6c7c9; font-size:small">Contact Us</a>
-              </p>
-              <p>
-                <a href="#!" class="nav-link" style="color: #c6c7c9;  font-size:small">Terms & Privacy</a>
-              </p>
-              <p>
-                <a href="#!" class="nav-link" style="color: #c6c7c9;  font-size:small">Accessibility Statement</a>
-              </p>
-          </div>
-          <!-- Grid column -->
-  
-          <!-- Grid column -->
-          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-            <!-- Links -->
-            <h6 class="text fw-bold mb-4" style="color: #f6f7f8;  font-size:medium">
+            <h6 class="text fw-bold mb-4" style="color: #0d10d6;  font-size:medium">
                 Explore
               </h6>
               <p>
-                  <a href="#!" class="nav-link" style="color: #c6c7c9; font-size:small">Popular Uploads</a>
+                  <a routerLink = "/AllRecipes" class="nav-link" style="color: #0d10d6; font-size:small">All Recipes</a>
                 </p>
-                <p>
-                  <a href="#!" class="nav-link" style="color: #c6c7c9;  font-size:small">Signature Cooks</a>
-                </p>
-                <p>
-                  <a href="#!" class="nav-link" style="color: #c6c7c9; font-size:small">Breakfast</a>
-                </p>
-                <p>
+                
+          </div>
+          <a routerLink = "/Home" class = "logo">
+          <img alt = "" src = "/assets/image/wvulogo.png" (click)="home()" class = "logo">
+          </a>
+
+            

@@ -23,8 +23,11 @@ export class FullRecipeComponent   implements OnInit {
 @Input() user: string;
 @Input() savedBy: string;
 @Input() canDelete: string;
+@Input() firstHalf: string;
+
   savedRecipes: RecipeCardModel[] =[]
-  constructor(private route: ActivatedRoute, private ps: ProductsService) { 
+  ingredients: string[] =[]
+  constructor(private route: ActivatedRoute, private ps: ProductsService, private router: Router) { 
   this.rName = "Buttered Noodles";
   this.rMeal = "blank";
   this.rPic = "blank";
@@ -37,6 +40,7 @@ export class FullRecipeComponent   implements OnInit {
   this.user = "none"
   this.savedBy = "";
   this.canDelete = "false";
+  this.firstHalf = "";
   }
  
   // to display a full recipe, the info needs to match the recipe card it came from
@@ -55,7 +59,15 @@ export class FullRecipeComponent   implements OnInit {
     this.user = this.route.snapshot.params['userToPass'];
     this.savedBy = this.route.snapshot.params['saveToPass'];
     this.canDelete = this.route.snapshot.params['deleteToPass'];
+    
+    this.ingredients = this.rIngred.split(",");
+    var first = this.rSteps.substring(this.rSteps.length / 2);
+    var index = first.indexOf(".");
+    this.firstHalf = this.rSteps.substring(0, index + 1 + (this.rSteps.length / 2));
+
 }
+
+  
 
 
 // this method will be called if a user decides to save a recipe
@@ -74,9 +86,6 @@ saveRecipe() {
 // in order to do so, we look at the name of the recipe and who it was liked by
 
 recipeNotSaved(): Boolean {
-  let theProduct = new RecipeCardModel(this.rPic, this.rDesc, this.rName, this.rIngred, this.rStyle, 
-    this.rMeal, this.rSteps, "", this.cook, this.prep, this.user, localStorage.getItem('userEmail')!);
-    var isSaved = false;
   this.ps.getSavedRecipes().subscribe((data: RecipeCardModel[])=> 
     {
     for(var product of data) {
@@ -85,6 +94,11 @@ recipeNotSaved(): Boolean {
   });
 
 
+  /*
+  To determine if a user has saved a recipe, we check 2 things:
+  1) The recipe names are the same
+  2) The recipe was saved by the current user logged in
+  */
   for (var product of this.savedRecipes) {
       if (product.recipeName == this.rName && product.savedBy == localStorage.getItem('userEmail')) {
         return false;
@@ -108,12 +122,17 @@ toDelete(): Boolean {
 
 }
 
-// this calls the appropriate service method for a user to unsave a recipe
+/*
+This method is called when we want to delete (unsave) a recipe
+This method is called when a user hits the "Unsave Recipe" button
+*/
 
 deleteRecipe() {
   let product = new RecipeCardModel(this.rPic, this.rDesc, this.rName, this.rIngred, this.rStyle, 
     this.rMeal, this.rSteps, "", this.cook, this.prep, this.user, localStorage.getItem('userEmail')!);
     this.ps.removeSavedRecipe(product);
+    alert("Recipe is no longer saved.");
+    this.router.navigate(['/SavedRecipes']);
 }
 
 

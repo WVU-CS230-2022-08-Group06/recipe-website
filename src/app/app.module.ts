@@ -14,7 +14,7 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
 import { HomeLayoutComponent } from './home-layout/home-layout.component';
 
 import { AddRecipeComponent } from './add-recipe/add-recipe.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -116,7 +116,8 @@ import { SavedRecipesComponent } from './saved-recipes/saved-recipes.component';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AngularFirestoreModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [AuthService, HttpClient, AuthGuardService, ModeratorGuard],
   bootstrap: [AppComponent]

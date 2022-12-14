@@ -13,6 +13,10 @@ import { AngularFireAuth } from "@angular/fire/compat/auth";
 })
 
 export class AuthService {
+    /*
+    These variables allow us post information to a specific url
+    The exact url depends on if a user is signing up, logging in, or changing their password
+    */
     baseUrl: string = "https://identitytoolkit.googleapis.com/v1/accounts"
     signUpEndPoint: string = "signUp";
     signIn: string = "signInWithPassword"
@@ -27,6 +31,16 @@ export class AuthService {
 
     }
 
+    /*
+    This is our auth service class
+    Allows users to sign-up and sign-in with backend Firebase Authentication
+    Also allows users to change their password if forgotten
+    */
+
+    // this method is called when a user is signing up for the first time
+    // base url is used with a specific end point
+    // we connect it to our firebase with the unique API key
+    // parameters: email and password
     public signUp(email: string, password: string) {
         const requestBody = {
             "email": email,
@@ -36,6 +50,10 @@ export class AuthService {
         return this.http.post<AuthResponse>(this.baseUrl + ":" + this.signUpEndPoint + "?" + "key=" + environment.firebase.apiKey, requestBody);
     }
 
+
+    // this method is called when a user is attempting to login to their account
+    // same base URL, but different end point
+    // parameters: email and password (since both needed to login)
     public login(email: string, password: string) {
         const requestBody = {
             "email": email,
@@ -45,6 +63,9 @@ export class AuthService {
         return this.http.post<AuthResponse>(this.baseUrl + ":" + this.signIn + "?" + "key=" + environment.firebase.apiKey, requestBody);
     }
 
+    // this method allows a user to set-up a new password if the original is forgotten
+    // we require an email parameter to send the reset email to
+    // same base URL, but different end point
     public forgotPassword(email: string) {
         const requestBody = {
             "email": email,

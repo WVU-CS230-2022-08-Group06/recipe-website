@@ -1,29 +1,62 @@
-<div class = "d-flex flex-column justify-content-center w-100 h-150 cool" >
+<!--
+  Very important HTML file!
+  Serves as our recipe upload form
+  Takes several inputs that correspond to recipe attributes
+  Every recipe submitted through this form will first be reviewed by moderators
+-->
+<div class = "d-flex flex-column justify-content-center w-500 h-450 cool" >
   
 <h2 style="text-align: center;">Enter your recipe details!</h2><br>
+<!--
+  This statement enforces the importance of filling out the recipe details properly
+  If users fail to do so, recipes will be rejected
+-->
+<p class = "warning">Filling out the fields entirely and correctly is critical to ensure your recipe gets accepted.</p>
     <form id = "method" #postForm = "ngForm" (ngSubmit) = "addRecipe(postForm.value, postForm)" class = "design" ngNativeValidate >
 
+      <!--
+        Recipe name input
+        Min length of 5, max length of 35
+        database attribute name is "recipeName"
+      -->
   <label for="fname">Recipe name:</label><br>
-  <input type="text" ngModel minlength="5" ngModel maxlength="30" id="fname" ngModel name = "recipeName" ngModel required><br>
+  <input type="text" ngModel minlength="5" ngModel maxlength="35" id="fname" ngModel name = "recipeName" ngModel required><br>
 
+  <!--
+    Recipe photo input
+    type is text, which allows URLS and photos off their system
+  -->
   <label for="lname">Recipe photo:</label><br>
   <input type = "text" id="lname"  ngModel name="recipePicture"ngModel required ><br>
 
+  <!--
+    Short description of the recipe
+    Min length of 10
+  -->
   <label for="short">Short Description:</label><br>
-  <input  type = "text" id="short" ngModel name = "desc"ngModel required><br>
+  <input  ngModel minlength = "10" type = "text" id="short" ngModel name = "desc"ngModel required><br>
 
 
+  <!--
+    Steps to a recipe
+  -->
   <label for = "steps">Recipe steps:</label><br>
-  <textarea style = "resize: none;"id = "steps" ngModel name = "steps" rows = "2" cols = "30"ngModel required>
+  <textarea style = "resize: none;"id = "steps" ngModel name = "steps" rows = "2" cols = "35"ngModel required>
   </textarea> <br>
 
-  <label for = "ingred">Ingredients:</label><br>
-  <textarea style = "resize: none;" ngModel name = "ingredients" id = "ingredients"  rows = "2" cols = "30"ngModel required >
+  <!--
+    Ingredients of a recipe
+    We inform the user to separate each ingredient by a comma
+  -->
+  <label for = "ingred">Ingredients (separate by comma):</label><br>
+  <textarea style = "resize: none;" ngModel name = "ingredients" id = "ingredients"  rows = "2" cols = "35"ngModel required >
   </textarea> <br>
 
 
 
-  
+  <!--
+    Users select which cuisine is most like their recipe being submitted
+  -->
   <label  for="style">Cuisine:</label><br>
   <select class = "custom-select" id= "style" ngModel name = "style"required>
     <option  value = "American">American</option>
@@ -33,6 +66,9 @@
     <option  value = "Indian">Indian</option>
   </select><br>
 
+  <!--
+    Users select which meal type is most like their recipe being submitted
+  -->
   <label for="type">Meal:</label><br>
   <select id= "type" class = "custom-select" ngModel name = "category"required>
     <option  value = "Breakfast">Breakfast</option>
@@ -42,22 +78,30 @@
   </select><br>
 
 
+  <!--
+    How long a recipe takes to prep (mins)
+    We assume every recipe takes at least 1 minute to prepare
+  -->
   <label for ="prep" class = "daprep">Prep time (mins):</label><br>
   <input type = "number" class = "times" id = "prep" ngModel name = "prepTime" required ngModel min = "1"><br>
 
+  <!--
+    How long a recipe takes to cook/bake (mins)
+    We assume every recipe takes at least 2 mins to cook
+  -->
   <label for ="cook" class = "dacook">Cook time (mins):&nbsp;&nbsp;</label><br>
   <input type = "number" class = "times" id = "prep" ngModel name = "cookTime" required ngModel min="2">
 
-
-
 <div class="container green">
   <div class="col">
-    <input type="submit" class="btn btn-primary"  id="testing" name = "Upload"  ngNativeValidate>
+    <!--
+      Our submit recipe button
+    -->
+    <input type="submit" class="btn btn-primary"  id="testing" name = "Submit"  ngNativeValidate>
 
     &nbsp;&nbsp;&nbsp;
-    <button type="submit"  required class="btn btn-danger"><a  style="color: white; text-decoration: none;" routerLink = "/Home">
-     CANCEL
-    </a></button>
+    <button type="submit" (click) = "cancel()" required class="btn btn-danger">Cancel
+    </button>
   </div>
 </div>
 

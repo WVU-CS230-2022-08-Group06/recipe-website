@@ -1,13 +1,31 @@
-<app-mod-navbar></app-mod-navbar>
+<!--
+    This is the code that displays all submitted recipes to the moderators
+    A loop is used to display each recipe card which can link to the expanded version of each recipe
+    This component is NOT available to regular users, just moderators
+    The mod-guard authenticates the access of this component
+-->
 
+<app-mod-navbar></app-mod-navbar>
 <h2 class = "specifics">Recipes to check:</h2>
 
 <div class = "container-fluid d-flex flex-wrap"  style = "margin-bottom: 5rem; margin-top: 1rem">
     
+    <!--
+        inspectRecipes is an array of recipes
+        All of the submitted recipes by users are pushed into this array
+        The details of each recipe is passed to the recipe cards
+    -->
     <div *ngFor = "let x of inspectRecipes">
         <app-cards user = {{x.creatorName}} [prepTime]=x.prepTime [cookTime]= x.cookTime  recipeIngredients = {{x.ingredients}} recipeSteps = {{x.steps}} desc = {{x.desc}} recipeName = {{x.recipeName}} recipePicture = {{x.recipePicture}}
         category= {{x.category}} theStyle = {{x.style}} route = "/FullRecipeComponent" >
         </app-cards>
+        <!--
+            The two buttons below are very important
+            The options are: Accept or Reject
+            If a mod accepts a recipe, the accept() method is called and pushes it to the "allrecipes" list
+            If a mod rejects a recipe, it is simply deleted
+            In either case, the recipe is deleted from the submitted recipes list
+        -->
         <button class = "btn btn-primary inspect"type="submit" (click) = "accept(x)">Accept</button>
         <button class = "btn btn-danger inspect"type = "submit" (click) = "reject(x)">Reject</button>
     </div>
